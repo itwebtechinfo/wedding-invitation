@@ -1,0 +1,1465 @@
+<!doctype html>
+<html lang="hi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>कृष्णा ❤️ प्रियंका — शाही विवाह आमंत्रण</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,500&family=Great+Vibes&family=Noto+Serif+Devanagari:wght@500;700&family=Rozha+One&family=Yatra+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              maroon: "#4A0E1A",
+              maroonDeep: "#2A0710",
+              gold: "#D4AF37",
+              goldLight: "#F5D77A",
+              goldDark: "#8A6F27",
+              ivory: "#FFF8E7",
+              rose: "#E6B7A9",
+            },
+            fontFamily: {
+              royal: ['"Cinzel Decorative"', "serif"],
+              serifLux: ['"Playfair Display"', "serif"],
+              script: ['"Great Vibes"', "cursive"],
+              devanagari: ['"Noto Serif Devanagari"', "serif"],
+              hindi: ['"Rozha One"', "serif"],
+              festive: ['"Yatra One"', "serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      :root {
+        --maroon: #4a0e1a;
+        --maroon-deep: #2a0710;
+        --gold: #d4af37;
+        --gold-light: #f5d77a;
+        --gold-dark: #8a6f27;
+        --ivory: #fff8e7;
+        --rose: #e6b7a9;
+      }
+      html,
+      body {
+        overflow-x: hidden;
+      }
+      body {
+        font-family: "Playfair Display", serif;
+        background: #1a0309;
+        color: var(--ivory);
+      }
+
+      /* ---------- Palace / Mandala Background ---------- */
+      .royal-bg {
+        background:
+          radial-gradient(
+            1200px 800px at 50% -10%,
+            rgba(212, 175, 55, 0.18),
+            transparent 60%
+          ),
+          radial-gradient(
+            900px 600px at 100% 100%,
+            rgba(230, 183, 169, 0.1),
+            transparent 60%
+          ),
+          radial-gradient(
+            900px 600px at 0% 100%,
+            rgba(212, 175, 55, 0.1),
+            transparent 60%
+          ),
+          linear-gradient(180deg, #2a0710 0%, #4a0e1a 50%, #2a0710 100%);
+        position: relative;
+      }
+      .royal-bg::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'><g fill='none' stroke='%23D4AF37' stroke-opacity='0.10' stroke-width='0.8'><circle cx='80' cy='80' r='60'/><circle cx='80' cy='80' r='40'/><circle cx='80' cy='80' r='20'/><path d='M80 5 L95 80 L80 155 L65 80 Z'/><path d='M5 80 L80 65 L155 80 L80 95 Z'/><path d='M28 28 L132 132 M132 28 L28 132'/></g></svg>");
+        background-size: 160px 160px;
+        pointer-events: none;
+        opacity: 0.55;
+      }
+
+      /* ---------- Gold typography ---------- */
+      .gold-foil {
+        color: #f5d77a;
+        background: none;
+        -webkit-text-fill-color: unset;
+
+        text-shadow:
+          0 2px 4px rgba(0, 0, 0, 0.4),
+          0 0 6px rgba(212, 175, 55, 0.15);
+      }
+      .gold-glow {
+        animation: goldGlow 2.8s ease-in-out infinite alternate;
+      }
+      @keyframes goldGlow {
+        from {
+          filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.45));
+        }
+        to {
+          filter: drop-shadow(0 0 22px rgba(245, 215, 122, 0.85));
+        }
+      }
+      .text-stroke-gold {
+        -webkit-text-stroke: 1px rgba(212, 175, 55, 0.55);
+      }
+
+      /* ---------- Ornaments & dividers ---------- */
+      .divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        color: var(--gold);
+      }
+      .divider .line {
+        height: 1px;
+        flex: 1;
+        max-width: 160px;
+        background: linear-gradient(90deg, transparent, #d4af37, transparent);
+      }
+
+      /* ---------- Cards ---------- */
+      .luxury-card {
+        background: linear-gradient(
+          145deg,
+          rgba(74, 14, 26, 0.85),
+          rgba(42, 7, 16, 0.95)
+        );
+        border: 1.5px solid rgba(212, 175, 55, 0.45);
+        box-shadow:
+          0 25px 50px -12px rgba(0, 0, 0, 0.75),
+          inset 0 0 30px rgba(212, 175, 55, 0.1);
+        backdrop-filter: blur(8px);
+        position: relative;
+        border-radius: 1.25rem;
+      }
+      .luxury-card::before,
+      .luxury-card::after {
+        content: "";
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        border: 1.5px solid var(--gold);
+        opacity: 0.7;
+      }
+      .luxury-card::before {
+        top: 8px;
+        left: 8px;
+        border-right: none;
+        border-bottom: none;
+        border-top-left-radius: 0.5rem;
+      }
+      .luxury-card::after {
+        bottom: 8px;
+        right: 8px;
+        border-left: none;
+        border-top: none;
+        border-bottom-right-radius: 0.5rem;
+      }
+
+      .jharokha {
+        border-top-left-radius: 50% 60%;
+        border-top-right-radius: 50% 60%;
+        border: 1.5px solid rgba(212, 175, 55, 0.55);
+        background: linear-gradient(
+          180deg,
+          rgba(74, 14, 26, 0.7),
+          rgba(42, 7, 16, 0.95)
+        );
+        transition: all 0.4s ease;
+      }
+      .jharokha:hover {
+        border-color: var(--gold-light);
+        box-shadow: 0 0 35px rgba(212, 175, 55, 0.45);
+        transform: translateY(-6px);
+      }
+
+      /* ---------- Mandala ---------- */
+      .mandala {
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><g fill='none' stroke='%23D4AF37' stroke-width='0.8'><circle cx='100' cy='100' r='95'/><circle cx='100' cy='100' r='78'/><circle cx='100' cy='100' r='60'/><circle cx='100' cy='100' r='42'/><circle cx='100' cy='100' r='24'/><circle cx='100' cy='100' r='8' fill='%23D4AF37'/><g><path d='M100 5 L108 60 L100 100 L92 60 Z'/><path d='M100 5 L108 60 L100 100 L92 60 Z' transform='rotate(30 100 100)'/><path d='M100 5 L108 60 L100 100 L92 60 Z' transform='rotate(60 100 100)'/><path d='M100 5 L108 60 L100 100 L92 60 Z' transform='rotate(90 100 100)'/><path d='M100 5 L108 60 L100 100 L92 60 Z' transform='rotate(120 100 100)'/><path d='M100 5 L108 60 L100 100 L92 60 Z' transform='rotate(150 100 100)'/><path d='M100 5 L108 60 L100 100 L92 60 Z' transform='rotate(180 100 100)'/><path d='M100 5 L108 60 L100 100 L92 60 Z' transform='rotate(210 100 100)'/><path d='M100 5 L108 60 L100 100 L92 60 Z' transform='rotate(240 100 100)'/><path d='M100 5 L108 60 L100 100 L92 60 Z' transform='rotate(270 100 100)'/><path d='M100 5 L108 60 L100 100 L92 60 Z' transform='rotate(300 100 100)'/><path d='M100 5 L108 60 L100 100 L92 60 Z' transform='rotate(330 100 100)'/></g></g></svg>");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+      .rotate-slow {
+        animation: spin 60s linear infinite;
+      }
+      .rotate-slower {
+        animation: spin 120s linear infinite reverse;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* ---------- Diya flame ---------- */
+      .diya-flame {
+        animation: flicker 0.25s infinite alternate ease-in-out;
+        transform-origin: bottom center;
+      }
+      @keyframes flicker {
+        0% {
+          transform: scale(1) rotate(-2deg);
+          filter: drop-shadow(0 0 6px #ffb703);
+        }
+        100% {
+          transform: scale(1.15) rotate(3deg);
+          filter: drop-shadow(0 0 16px #ffb703);
+        }
+      }
+
+      /* ---------- Petals & particles ---------- */
+      .petal {
+        position: fixed;
+        top: -30px;
+        pointer-events: none;
+        z-index: 40;
+        animation: fall linear forwards;
+      }
+      @keyframes fall {
+        to {
+          transform: translateY(110vh) translateX(120px) rotate(540deg);
+          opacity: 0;
+        }
+      }
+      .sparkle {
+        position: fixed;
+        width: 4px;
+        height: 4px;
+        border-radius: 9999px;
+        background: radial-gradient(
+          circle,
+          #fff1b8,
+          #d4af37 60%,
+          transparent 70%
+        );
+        pointer-events: none;
+        z-index: 30;
+        opacity: 0;
+        animation: twinkle 4s linear infinite;
+      }
+      @keyframes twinkle {
+        0% {
+          transform: translateY(0) scale(0.6);
+          opacity: 0;
+        }
+        20% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-110vh) scale(1.4);
+          opacity: 0;
+        }
+      }
+
+      /* ---------- Reveal on scroll ---------- */
+      .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 1s cubic-bezier(0.21, 1.02, 0.43, 1.01);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: none;
+      }
+
+      /* ---------- Hero ---------- */
+      .hero-bg {
+        background:
+          linear-gradient(rgba(20, 3, 8, 0.78), rgba(42, 7, 16, 0.92)),
+          url("https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1920&auto=format&fit=crop");
+        background-size: cover;
+        background-position: center;
+      }
+
+      /* ---------- Buttons ---------- */
+      .btn-royal {
+        background: linear-gradient(
+          135deg,
+          #d4af37 0%,
+          #f5d77a 50%,
+          #8a6f27 100%
+        );
+        color: #2a0710;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        border: 1px solid rgba(255, 241, 184, 0.7);
+        box-shadow:
+          0 12px 30px -10px rgba(212, 175, 55, 0.55),
+          inset 0 0 12px rgba(255, 255, 255, 0.25);
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+      .btn-royal:hover {
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0 20px 40px -10px rgba(212, 175, 55, 0.7);
+      }
+
+      .btn-ghost-gold {
+        border: 1.5px solid var(--gold);
+        color: var(--gold);
+        transition: all 0.25s ease;
+      }
+      .btn-ghost-gold:hover {
+        background: var(--gold);
+        color: #2a0710;
+        box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+      }
+
+      /* ---------- Music equalizer ---------- */
+      .eq {
+        display: flex;
+        align-items: flex-end;
+        gap: 2px;
+        height: 18px;
+      }
+      .eq .bar {
+        width: 3px;
+        background: #2a0710;
+        border-radius: 2px;
+        animation: bounceBar 0.9s ease-in-out infinite alternate;
+      }
+      .eq .bar:nth-child(2) {
+        animation-delay: 0.15s;
+      }
+      .eq .bar:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .eq .bar:nth-child(4) {
+        animation-delay: 0.45s;
+      }
+      .eq.paused .bar {
+        animation-play-state: paused;
+        height: 30% !important;
+      }
+      @keyframes bounceBar {
+        0% {
+          height: 20%;
+        }
+        100% {
+          height: 100%;
+        }
+      }
+
+      /* ---------- Couple name pulse ---------- */
+      .couple-pulse {
+        animation: none;
+        word-break: break-word;
+        overflow-wrap: break-word;
+      }
+      @keyframes pulseName {
+        0% {
+          text-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
+        }
+        100% {
+          text-shadow:
+            0 0 28px rgba(245, 215, 122, 0.85),
+            0 0 50px rgba(212, 175, 55, 0.5);
+        }
+      }
+
+      /* ---------- Door / Invitation open ---------- */
+      .door {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 50%;
+        z-index: 100;
+        background:
+          linear-gradient(180deg, rgba(74, 14, 26, 0.95), rgba(20, 3, 8, 0.98)),
+          url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'><g fill='none' stroke='%23D4AF37' stroke-opacity='0.35' stroke-width='0.8'><circle cx='100' cy='100' r='80'/><circle cx='100' cy='100' r='60'/><circle cx='100' cy='100' r='40'/><path d='M100 10 L110 100 L100 190 L90 100 Z'/><path d='M10 100 L100 110 L190 100 L100 90 Z'/></g></svg>");
+        background-size:
+          cover,
+          200px 200px;
+        background-position: center;
+        transition: transform 1.6s cubic-bezier(0.77, 0, 0.18, 1);
+        box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.6);
+      }
+      .door.left {
+        left: 0;
+        border-right: 2px solid var(--gold);
+      }
+      .door.right {
+        right: 0;
+        border-left: 2px solid var(--gold);
+      }
+      .doors-open .door.left {
+        transform: translateX(-105%);
+      }
+      .doors-open .door.right {
+        transform: translateX(105%);
+      }
+
+      /* ---------- Section heading ornament ---------- */
+      .ornament {
+        width: 60px;
+        height: 18px;
+        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 18'><path d='M0 9 Q15 0 30 9 T60 9' fill='none' stroke='%23D4AF37' stroke-width='1.4'/><circle cx='30' cy='9' r='2.2' fill='%23D4AF37'/></svg>")
+          center/contain no-repeat;
+      }
+
+      /* ---------- Timeline ---------- */
+      .timeline-line {
+        background: linear-gradient(
+          180deg,
+          transparent,
+          #d4af37 15%,
+          #d4af37 85%,
+          transparent
+        );
+      }
+
+      /* ---------- Gallery ---------- */
+      .gallery-img {
+        transition:
+          transform 0.6s ease,
+          filter 0.6s ease;
+        filter: sepia(0.15) saturate(1.1);
+      }
+      .gallery-img:hover {
+        transform: scale(1.05);
+        filter: none;
+      }
+
+      /* ---------- Utility ---------- */
+      .scrollbar-hidden::-webkit-scrollbar {
+        display: none;
+      }
+
+      @media (max-width: 640px) {
+        .mandala-hero {
+          width: 300px !important;
+          height: 300px !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="font-serifLux">
+    <!-- ============ INVITATION DOORS ============ -->
+    <div id="doors" class="fixed inset-0 z-[100] pointer-events-none">
+      <div class="door left flex items-center justify-end pr-6">
+        <div
+          class="text-gold font-royal text-sm tracking-[0.4em] rotate-180"
+          style="writing-mode: vertical-rl"
+        >
+          WELCOME • स्वागत है
+        </div>
+      </div>
+      <div class="door right flex items-center justify-start pl-6">
+        <div
+          class="text-gold font-royal text-sm tracking-[0.4em]"
+          style="writing-mode: vertical-rl"
+        >
+          शाही विवाह • ROYAL WEDDING
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ LOADING / OPEN SCREEN ============ -->
+    <div
+      id="openScreen"
+      class="fixed inset-0 z-[110] flex flex-col items-center justify-center bg-maroonDeep text-center px-6"
+    >
+      <div class="relative w-64 h-64 mb-8">
+        <div class="absolute inset-0 mandala rotate-slow opacity-80"></div>
+        <div class="absolute inset-6 mandala rotate-slower opacity-60"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <span class="font-hindi text-5xl gold-foil">ॐ</span>
+        </div>
+      </div>
+      <h2 class="font-devanagari text-2xl md:text-3xl gold-foil mb-2">
+        ॥ श्री गणेशाय नमः ॥
+      </h2>
+      <p class="text-rose/80 font-script text-3xl mb-8">
+        You're cordially invited
+      </p>
+      <button
+        id="openBtn"
+        class="btn-royal px-10 py-4 rounded-full font-royal text-sm md:text-base"
+      >
+        🌸 OPEN INVITATION • आमंत्रण खोलें 🌸
+      </button>
+      <p class="mt-6 text-xs text-ivory/60 tracking-widest">
+        TAP TO BEGIN THE ROYAL EXPERIENCE
+      </p>
+    </div>
+
+    <!-- ============ MUSIC CONTROL ============ -->
+    <button
+      id="musicBtn"
+      class="fixed bottom-5 right-5 z-[90] w-14 h-14 rounded-full btn-royal flex items-center justify-center shadow-2xl"
+    >
+      <div class="eq paused" id="eq">
+        <span class="bar"></span><span class="bar"></span
+        ><span class="bar"></span><span class="bar"></span>
+      </div>
+    </button>
+    <!-- Traditional Indian shehnai/instrumental wedding music (royalty-free) -->
+    <audio id="bgMusic" loop preload="auto">
+      <source src="./aud-1.mpeg" type="audio/mpeg" />
+    </audio>
+
+    <!-- Fireworks button -->
+    <button
+      id="fwBtn"
+      class="fixed bottom-5 left-5 z-[90] px-4 py-3 rounded-full btn-ghost-gold text-xs font-royal tracking-widest backdrop-blur"
+    >
+      🎆 CELEBRATE
+    </button>
+
+    <!-- ============ HERO ============ -->
+    <section
+      id="hero"
+      class="relative min-h-screen hero-bg flex items-center justify-center overflow-hidden"
+    >
+      <!-- corner ornaments -->
+      <div
+        class="absolute top-4 left-4 w-20 h-20 border-t-2 border-l-2 border-gold/60 rounded-tl-3xl"
+      ></div>
+      <div
+        class="absolute top-4 right-4 w-20 h-20 border-t-2 border-r-2 border-gold/60 rounded-tr-3xl"
+      ></div>
+      <div
+        class="absolute bottom-4 left-4 w-20 h-20 border-b-2 border-l-2 border-gold/60 rounded-bl-3xl"
+      ></div>
+      <div
+        class="absolute bottom-4 right-4 w-20 h-20 border-b-2 border-r-2 border-gold/60 rounded-br-3xl"
+      ></div>
+
+      <!-- rotating mandala behind names -->
+      <div
+        class="mandala-hero absolute w-[520px] h-[520px] mandala rotate-slow opacity-10"
+      ></div>
+      <div
+        class="mandala-hero absolute w-[380px] h-[380px] mandala rotate-slower opacity-10"
+      ></div>
+
+      <!-- Diyas -->
+      <div class="absolute bottom-10 left-1/4 flex flex-col items-center">
+        <span class="diya-flame text-3xl">🔥</span>
+        <span class="text-3xl -mt-1">🪔</span>
+      </div>
+      <div class="absolute bottom-10 right-1/4 flex flex-col items-center">
+        <span class="diya-flame text-3xl">🔥</span>
+        <span class="text-3xl -mt-1">🪔</span>
+      </div>
+
+      <div class="relative z-10 text-center px-6 max-w-4xl">
+        <p
+          class="font-devanagari text-gold text-lg md:text-xl tracking-widest mb-4 gold-glow"
+        >
+          ॥ श्री गणेशाय नमः ॥
+        </p>
+        <div class="divider mb-6">
+          <span class="line"></span
+          ><span class="font-royal text-xs tracking-[0.5em]">SHUBH VIVAH</span
+          ><span class="line"></span>
+        </div>
+
+        <h1
+          class="font-royal text-5xl sm:text-6xl md:text-5xl lg:text-7xl xl:text-8xl gold-foil couple-pulse leading-tight tracking-wide px-2 flex flex-col md:flex-row md:items-center md:justify-center md:whitespace-nowrap"
+        >
+          <span class="block md:inline font-black uppercase text-center"
+            >Krishna</span
+          >
+          <span
+            class="text-rose text-4xl sm:text-5xl md:text-4xl lg:text-6xl block md:inline my-3 md:my-0 md:mx-5 text-center"
+            >&amp;</span
+          >
+          <span class="block md:inline font-black uppercase text-center"
+            >Priyanka</span
+          >
+        </h1>
+        <p class="font-script text-4xl md:text-5xl text-rose mt-3">
+          are getting married
+        </p>
+        <p class="font-hindi text-3xl md:text-4xl gold-foil mt-4">
+          कृष्णा &amp; प्रियंका
+        </p>
+
+        <div class="mt-10 inline-flex flex-col items-center px-8 py-5 jharokha">
+          <p class="font-royal tracking-widest text-gold text-sm">
+            SAVE THE DATE
+          </p>
+          <p class="font-serifLux text-2xl md:text-3xl text-ivory mt-1">
+            24 • June • 2026
+          </p>
+          <p class="font-devanagari text-rose text-sm mt-1">
+            सखवानिया बुजुर्ग, कुशीनगर
+          </p>
+        </div>
+
+        <div class="mt-10 flex flex-wrap gap-3 justify-center">
+          <a
+            href="#invite"
+            class="btn-royal px-8 py-3 rounded-full text-sm tracking-widest"
+            >VIEW INVITATION</a
+          >
+          <a
+            href="#rsvp"
+            class="btn-ghost-gold px-8 py-3 rounded-full text-sm tracking-widest"
+            >RSVP</a
+          >
+        </div>
+      </div>
+
+      <!-- scroll hint -->
+      <div
+        class="absolute bottom-3 left-1/2 -translate-x-1/2 text-gold/70 text-xs tracking-[0.4em] animate-bounce"
+      >
+        SCROLL ↓
+      </div>
+    </section>
+
+    <!-- ============ GANESH VANDANA ============ -->
+<section class="royal-bg py-12 md:py-24 px-4 md:px-6 relative">
+        <div class="max-w-4xl mx-auto text-center reveal relative z-10">
+        <div class="ornament mx-auto mb-4"></div>
+        <p class="font-royal tracking-[0.4em] text-gold/80 text-xs mb-2">
+          GANESH VANDANA
+        </p>
+        <h2 class="font-hindi text-4xl md:text-5xl gold-foil mb-8">
+          ॥ श्री गणेश वंदना ॥
+        </h2>
+
+        <div class="relative inline-block mb-8">
+          <div class="absolute inset-0 mandala rotate-slow opacity-30"></div>
+          <div
+            class="relative w-40 h-40 flex items-center justify-center text-7xl"
+          >
+            🕉️
+          </div>
+        </div>
+
+        <p
+          class="font-devanagari text-xl md:text-2xl text-ivory leading-relaxed"
+        >
+          वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ।<br />
+          निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥
+        </p>
+        <p class="text-rose/80 italic mt-6 max-w-2xl mx-auto">
+          We invoke the blessings of Lord Ganesha — the remover of obstacles —
+          upon this sacred union of two souls and two families.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ COUPLE INTRODUCTION ============ -->
+    <section class="royal-bg py-12 md:py-24 px-4 md:px-6 relative">
+      <div class="max-w-6xl mx-auto reveal relative z-10">
+        <div class="text-center mb-14">
+          <div class="ornament mx-auto mb-3"></div>
+          <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">
+            THE COUPLE
+          </p>
+          <h2 class="font-hindi text-4xl md:text-5xl gold-foil mt-2">
+            वर एवं वधू
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-10 items-stretch">
+          <!-- Groom -->
+          <div class="jharokha p-8 text-center">
+            <div
+              class="w-44 h-44 mx-auto rounded-full overflow-hidden border-4 border-gold shadow-[0_0_30px_rgba(212,175,55,.4)]"
+            >
+              <img
+                src="./krishna.png"
+                class="w-full h-full object-cover"
+                alt="Groom"
+              />
+            </div>
+            <p class="font-script text-3xl text-rose mt-5">The Groom</p>
+            <h3 class="font-royal text-3xl gold-foil mt-1">Krishna Gupta</h3>
+            <p class="font-hindi text-2xl text-ivory mt-1">कृष्णा गुप्ता</p>
+            <p class="text-ivory/80 italic mt-4 max-w-sm mx-auto">
+              “A heart full of dreams, a soul full of love — ready to begin this
+              sacred journey.”
+            </p>
+            <p class="text-gold text-xs tracking-widest mt-4">
+              S/O Shri ____ Gupta &amp; Smt. ____ Devi
+            </p>
+          </div>
+
+          <!-- Bride -->
+          <div class="jharokha p-8 text-center">
+            <div
+              class="w-44 h-44 mx-auto rounded-full overflow-hidden border-4 border-gold shadow-[0_0_30px_rgba(212,175,55,.4)]"
+            >
+              <img
+                src="./krishna-wife.png"
+                class="w-full h-full object-cover"
+                alt="Bride"
+              />
+            </div>
+            <p class="font-script text-3xl text-rose mt-5">The Bride</p>
+            <h3 class="font-royal text-3xl gold-foil mt-1">Priyanka Gupta</h3>
+            <p class="font-hindi text-2xl text-ivory mt-1">प्रियंका गुप्ता</p>
+            <p class="text-ivory/80 italic mt-4 max-w-sm mx-auto">
+              “With grace in her steps and love in her eyes — she walks into a
+              new beginning.”
+            </p>
+            <p class="text-gold text-xs tracking-widest mt-4">
+              D/O Shri ____ Gupta &amp; Smt. ____ Devi
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INVITATION MESSAGE ============ -->
+<section id="invite" class="royal-bg py-12 md:py-24 px-4 md:px-6 relative">
+        <div class="max-w-4xl mx-auto reveal text-center relative z-10">
+        <div class="luxury-card p-10 md:p-14">
+          <div class="ornament mx-auto mb-4"></div>
+          <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">
+            INVITATION
+          </p>
+          <h2 class="font-hindi text-4xl md:text-5xl gold-foil mt-2 mb-8">
+            शुभ विवाह आमंत्रण
+          </h2>
+
+          <p
+            class="font-devanagari text-lg md:text-xl text-ivory leading-loose"
+          >
+            परमपिता परमेश्वर की असीम अनुकंपा एवं बड़ों के आशीर्वाद स्वरूप, हमारे
+            जीवन के इस नवीन स्वर्णिम अध्याय की मंगल वेला में हम आपको सपरिवार
+            सादर आमंत्रित करते हैं।
+          </p>
+          <div class="my-6 divider">
+            <span class="line"></span>✦<span class="line"></span>
+          </div>
+          <p class="text-ivory/90 italic max-w-2xl mx-auto">
+            With the blessings of the Almighty and our elders, we joyfully
+            invite you and your family to grace the wedding celebrations of our
+            beloved children — and shower them with your love.
+          </p>
+          <p class="mt-6 text-gold font-script text-2xl">
+            🙏 आपका आगमन हमारे लिए परम सौभाग्य होगा 🙏
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LOVE STORY TIMELINE ============ -->
+<section class="royal-bg py-12 md:py-24 px-4 md:px-6 relative">
+        <div class="max-w-5xl mx-auto reveal relative z-10">
+        <div class="text-center mb-14">
+          <div class="ornament mx-auto mb-3"></div>
+          <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">
+            OUR LOVE STORY
+          </p>
+          <h2 class="font-hindi text-4xl md:text-5xl gold-foil mt-2">
+            हमारी प्रेम कहानी
+          </h2>
+        </div>
+
+        <div class="relative">
+          <div
+            class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] timeline-line hidden md:block"
+          ></div>
+
+          <!-- items -->
+          <div class="space-y-10">
+            <!-- 1 -->
+            <div class="md:grid md:grid-cols-2 md:gap-10 items-center">
+              <div class="luxury-card p-6 md:text-right">
+                <p class="text-gold font-royal tracking-widest text-xs">
+                  FIRST MEETING
+                </p>
+                <h4 class="font-hindi text-2xl text-ivory mt-1">
+                  पहली मुलाकात
+                </h4>
+                <p class="text-ivory/80 mt-2">
+                  A chance encounter at a family gathering — two glances, a shy
+                  smile, and the universe quietly whispered:
+                  <em>this is the one</em>.
+                </p>
+              </div>
+              <div class="hidden md:flex justify-start pl-6">
+                <span class="text-5xl">🌹</span>
+              </div>
+            </div>
+            <!-- 2 -->
+            <div class="md:grid md:grid-cols-2 md:gap-10 items-center">
+              <div class="hidden md:flex justify-end pr-6">
+                <span class="text-5xl">💌</span>
+              </div>
+              <div class="luxury-card p-6">
+                <p class="text-gold font-royal tracking-widest text-xs">
+                  FALLING IN LOVE
+                </p>
+                <h4 class="font-hindi text-2xl text-ivory mt-1">
+                  प्यार की शुरुआत
+                </h4>
+                <p class="text-ivory/80 mt-2">
+                  Long phone calls, shared dreams, late-night laughs — every
+                  conversation made the heart a little fuller.
+                </p>
+              </div>
+            </div>
+            <!-- 3 -->
+            <div class="md:grid md:grid-cols-2 md:gap-10 items-center">
+              <div class="luxury-card p-6 md:text-right">
+                <p class="text-gold font-royal tracking-widest text-xs">
+                  THE PROPOSAL
+                </p>
+                <h4 class="font-hindi text-2xl text-ivory mt-1">सगाई</h4>
+                <p class="text-ivory/80 mt-2">
+                  On a quiet golden evening, a promise was made — to walk
+                  together, hand in hand, through every season of life.
+                </p>
+              </div>
+              <div class="hidden md:flex justify-start pl-6">
+                <span class="text-5xl">💍</span>
+              </div>
+            </div>
+            <!-- 4 -->
+            <div class="md:grid md:grid-cols-2 md:gap-10 items-center">
+              <div class="hidden md:flex justify-end pr-6">
+                <span class="text-5xl">👑</span>
+              </div>
+              <div class="luxury-card p-6">
+                <p class="text-gold font-royal tracking-widest text-xs">
+                  FOREVER BEGINS
+                </p>
+                <h4 class="font-hindi text-2xl text-ivory mt-1">सात फेरे</h4>
+                <p class="text-ivory/80 mt-2">
+                  And now, surrounded by family and blessings — two souls become
+                  one, forever and always.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WEDDING EVENTS ============ -->
+    <section class="royal-bg py-12 md:py-24 px-4 md:px-6 relative">
+      <div class="max-w-7xl mx-auto reveal relative z-10">
+        <div class="text-center mb-14">
+          <div class="ornament mx-auto mb-3"></div>
+          <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">
+            CELEBRATIONS
+          </p>
+          <h2 class="font-hindi text-4xl md:text-5xl gold-foil mt-2">
+            उत्सव कार्यक्रम
+          </h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Card template -->
+          <div class="luxury-card p-7 text-center group">
+            <div class="text-5xl mb-3">🌼</div>
+            <p class="font-royal text-gold tracking-widest text-xs">HALDI</p>
+            <h4 class="font-hindi text-2xl text-ivory mt-1">हल्दी समारोह</h4>
+            <p class="text-rose mt-3">23 June 2026 • Morning</p>
+            <p class="text-ivory/70 text-sm mt-2">
+              📍 Sakhwaniya Buzurg, Kushinagar
+            </p>
+          </div>
+
+          <div class="luxury-card p-7 text-center">
+            <div class="text-5xl mb-3">🌿</div>
+            <p class="font-royal text-gold tracking-widest text-xs">MEHENDI</p>
+            <h4 class="font-hindi text-2xl text-ivory mt-1">मेहंदी रस्म</h4>
+            <p class="text-rose mt-3">22 June 2026 • Evening</p>
+            <p class="text-ivory/70 text-sm mt-2">
+              📍 Sakhwaniya Buzurg, Kushinagar
+            </p>
+          </div>
+
+          <div class="luxury-card p-7 text-center">
+            <div class="text-5xl mb-3">🎶</div>
+            <p class="font-royal text-gold tracking-widest text-xs">SANGEET</p>
+            <h4 class="font-hindi text-2xl text-ivory mt-1">संगीत संध्या</h4>
+            <p class="text-rose mt-3">22 June 2026 • Night</p>
+            <p class="text-ivory/70 text-sm mt-2">
+              📍 Sakhwaniya Buzurg, Kushinagar
+            </p>
+          </div>
+
+          <div class="luxury-card p-7 text-center">
+            <div class="text-5xl mb-3">🔱</div>
+            <p class="font-royal text-gold tracking-widest text-xs">TILAK</p>
+            <h4 class="font-hindi text-2xl text-ivory mt-1">तिलक समारोह</h4>
+            <p class="text-rose mt-3">21 June 2026</p>
+            <p class="text-ivory/70 text-sm mt-2">
+              📍 Sakhwaniya Buzurg, Kushinagar
+            </p>
+          </div>
+
+          <div
+            class="luxury-card p-7 text-center border-2 border-goldLight relative"
+          >
+            <span
+              class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-maroonDeep text-[10px] font-bold tracking-widest px-3 py-1 rounded-full"
+              >MAIN DAY</span
+            >
+            <div class="text-5xl mb-3">👑</div>
+            <p class="font-royal text-gold tracking-widest text-xs">
+              WEDDING CEREMONY
+            </p>
+            <h4 class="font-hindi text-2xl text-ivory mt-1">
+              पाणिग्रहण संस्कार
+            </h4>
+            <p class="text-rose mt-3">24 June 2026 • Auspicious Muhurat</p>
+            <p class="text-ivory/70 text-sm mt-2">
+              📍 Sakhwaniya Buzurg, Kushinagar
+            </p>
+          </div>
+
+          <div class="luxury-card p-7 text-center">
+            <div class="text-5xl mb-3">🥂</div>
+            <p class="font-royal text-gold tracking-widest text-xs">
+              RECEPTION
+            </p>
+            <h4 class="font-hindi text-2xl text-ivory mt-1">स्वागत समारोह</h4>
+            <p class="text-rose mt-3">25 June 2026 • Evening</p>
+            <p class="text-ivory/70 text-sm mt-2">
+              📍 Sakhwaniya Buzurg, Kushinagar
+            </p>
+          </div>
+
+          <div
+            class="luxury-card p-7 text-center sm:col-span-2 lg:col-span-3 max-w-md mx-auto w-full"
+          >
+            <div class="text-5xl mb-3">🌸</div>
+            <p class="font-royal text-gold tracking-widest text-xs">VIDAI</p>
+            <h4 class="font-hindi text-2xl text-ivory mt-1">विदाई समारोह</h4>
+            <p class="text-rose mt-3">27 June 2026</p>
+            <p class="text-ivory/70 text-sm mt-2">
+              📍 Sakhwaniya Buzurg, Kushinagar
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAMILY DETAILS ============ -->
+    <section class="royal-bg py-12 md:py-24 px-4 md:px-6 relative">
+      <div class="max-w-6xl mx-auto reveal relative z-10">
+        <div class="text-center mb-14">
+          <div class="ornament mx-auto mb-3"></div>
+          <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">
+            OUR FAMILIES
+          </p>
+          <h2 class="font-hindi text-4xl md:text-5xl gold-foil mt-2">
+            परिवार परिचय
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="luxury-card p-8">
+            <h3 class="font-royal text-2xl gold-foil text-center">
+              Groom's Family
+            </h3>
+            <p class="text-rose text-center font-hindi text-xl mb-6">वर पक्ष</p>
+            <ul class="space-y-3 text-ivory/90">
+              <li class="flex justify-between border-b border-gold/20 pb-2">
+                <span>Father</span
+                ><span class="text-gold">Shri ____ Gupta</span>
+              </li>
+              <li class="flex justify-between border-b border-gold/20 pb-2">
+                <span>Mother</span><span class="text-gold">Smt. ____ Devi</span>
+              </li>
+              <li class="flex justify-between border-b border-gold/20 pb-2">
+                <span>Grandparents</span
+                ><span class="text-gold">Late Shri ____ Gupta</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Siblings</span
+                ><span class="text-gold">____ &amp; ____</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="luxury-card p-8">
+            <h3 class="font-royal text-2xl gold-foil text-center">
+              Bride's Family
+            </h3>
+            <p class="text-rose text-center font-hindi text-xl mb-6">
+              वधू पक्ष
+            </p>
+            <ul class="space-y-3 text-ivory/90">
+              <li class="flex justify-between border-b border-gold/20 pb-2">
+                <span>Father</span
+                ><span class="text-gold">Shri ____ Gupta</span>
+              </li>
+              <li class="flex justify-between border-b border-gold/20 pb-2">
+                <span>Mother</span><span class="text-gold">Smt. ____ Devi</span>
+              </li>
+              <li class="flex justify-between border-b border-gold/20 pb-2">
+                <span>Grandparents</span
+                ><span class="text-gold">Late Shri ____ Gupta</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Siblings</span
+                ><span class="text-gold">____ &amp; ____</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VENUE + MAP ============ -->
+    <section class="royal-bg py-12 md:py-24 px-4 md:px-6 relative">
+      <div
+        class="max-w-6xl mx-auto reveal grid md:grid-cols-2 gap-8 items-stretch relative z-10"
+      >
+        <div class="luxury-card p-8">
+          <div class="ornament mb-3"></div>
+          <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">VENUE</p>
+          <h2 class="font-hindi text-3xl md:text-4xl gold-foil mt-1">
+            विवाह स्थल
+          </h2>
+          <p class="text-ivory mt-6 text-lg">Sakhwaniya Buzurg</p>
+          <p class="text-ivory/70">Kushinagar, Uttar Pradesh, India</p>
+
+          <div class="mt-6 space-y-2 text-ivory/80">
+            <p>📅 <span class="text-gold">24 June 2026</span></p>
+            <p>⏰ <span class="text-gold">Auspicious Muhurat</span></p>
+            <p>👗 <span class="text-gold">Traditional Indian Attire</span></p>
+          </div>
+
+          <a
+            href="https://maps.google.com/?q=Sakhwaniya+Buzurg+Kushinagar"
+            target="_blank"
+            rel="noopener"
+            class="mt-8 inline-block btn-royal px-6 py-3 rounded-full text-sm tracking-widest"
+          >
+            📍 GET DIRECTIONS
+          </a>
+        </div>
+
+        <div class="luxury-card p-2 overflow-hidden">
+          <iframe
+            class="w-full h-full min-h-[360px] rounded-xl border-0"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Sakhwaniya+Buzurg+Kushinagar&output=embed"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COUNTDOWN ============ -->
+    <section class="royal-bg py-12 md:py-24 px-4 md:px-6 relative">
+      <div class="max-w-5xl mx-auto reveal text-center relative z-10">
+        <div class="ornament mx-auto mb-3"></div>
+        <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">
+          COUNTDOWN TO FOREVER
+        </p>
+        <h2 class="font-hindi text-4xl md:text-5xl gold-foil mt-2 mb-10">
+          शुभ घड़ी की प्रतीक्षा
+        </h2>
+
+        <div
+          id="countdown"
+          class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
+        >
+          <div class="luxury-card py-6">
+            <div id="cdDays" class="font-royal text-4xl md:text-6xl gold-foil">
+              00
+            </div>
+            <p class="text-gold text-xs tracking-widest mt-2">DAYS</p>
+          </div>
+          <div class="luxury-card py-6">
+            <div id="cdHours" class="font-royal text-4xl md:text-6xl gold-foil">
+              00
+            </div>
+            <p class="text-gold text-xs tracking-widest mt-2">HOURS</p>
+          </div>
+          <div class="luxury-card py-6">
+            <div id="cdMins" class="font-royal text-4xl md:text-6xl gold-foil">
+              00
+            </div>
+            <p class="text-gold text-xs tracking-widest mt-2">MINUTES</p>
+          </div>
+          <div class="luxury-card py-6">
+            <div id="cdSecs" class="font-royal text-4xl md:text-6xl gold-foil">
+              00
+            </div>
+            <p class="text-gold text-xs tracking-widest mt-2">SECONDS</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="royal-bg py-12 md:py-24 px-4 md:px-6 relative">
+      <div class="max-w-7xl mx-auto reveal relative z-10">
+        <div class="text-center mb-12">
+          <div class="ornament mx-auto mb-3"></div>
+          <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">
+            MOMENTS
+          </p>
+          <h2 class="font-hindi text-4xl md:text-5xl gold-foil mt-2">
+            यादगार पल
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div class="overflow-hidden rounded-xl border border-gold/40">
+            <img
+              class="gallery-img w-full h-56 object-cover"
+              src="https://images.unsplash.com/photo-1583939411023-14783179e581?q=80&w=600&auto=format&fit=crop"
+              alt=""
+            />
+          </div>
+          <div class="overflow-hidden rounded-xl border border-gold/40">
+            <img
+              class="gallery-img w-full h-56 object-cover"
+              src="./luwadlin-bosman-WAVA6ZbothA-unsplash.jpg"
+              alt=""
+            />
+          </div>
+          <div class="overflow-hidden rounded-xl border border-gold/40">
+            <img
+              class="gallery-img w-full h-56 object-fit-cover"
+              src="./krishna.png"
+              alt=""
+            />
+          </div>
+          <div class="overflow-hidden rounded-xl border border-gold/40">
+            <img
+              class="gallery-img w-full h-56 object-cover"
+              src="https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=600&auto=format&fit=crop"
+              alt=""
+            />
+          </div>
+          <div class="overflow-hidden rounded-xl border border-gold/40">
+            <img
+              class="gallery-img w-full h-56 object-cover"
+              src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?q=80&w=600&auto=format&fit=crop"
+              alt=""
+            />
+          </div>
+          <div class="overflow-hidden rounded-xl border border-gold/40">
+            <img
+              class="gallery-img w-full h-56 object-fit"
+              src="./krishna-wife.png"
+              alt=""
+            />
+          </div>
+          <div class="overflow-hidden rounded-xl border border-gold/40">
+            <img
+              class="gallery-img w-full h-56 object-cover"
+              src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600&auto=format&fit=crop"
+              alt=""
+            />
+          </div>
+          <div class="overflow-hidden rounded-xl border border-gold/40">
+            <img
+              class="gallery-img w-full h-56 object-cover"
+              src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=600&auto=format&fit=crop"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BLESSINGS ============ -->
+    <section class="royal-bg py-12 md:py-24 px-4 md:px-6 relative">
+      <div class="max-w-4xl mx-auto reveal text-center relative z-10">
+        <div class="ornament mx-auto mb-3"></div>
+        <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">
+          BLESSINGS
+        </p>
+        <h2 class="font-hindi text-4xl md:text-5xl gold-foil mt-2 mb-8">
+          शुभ आशीर्वाद
+        </h2>
+
+        <div class="luxury-card p-10">
+          <p
+            class="font-devanagari text-xl md:text-2xl text-ivory leading-loose"
+          >
+            “मंत्रों की गूंज से महकेगा गृहस्थ जीवन का आँगन,<br />
+            स्नेह और विश्वास से अटूट रहेगा यह सुंदर बंधन।<br />
+            आकर देवें अपना आशीष इस पावन बेला पर आप,<br />
+            धन्य हो जाएगा हमारे बच्चों का यह नया जीवन।”
+          </p>
+          <div class="mt-6 divider">
+            <span class="line"></span>🪷<span class="line"></span>
+          </div>
+          <p class="italic text-ivory/80 mt-4">
+            May the divine grace of the Almighty bless this sacred union with
+            eternal love, peace, and prosperity.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RSVP ============ -->
+    <section id="rsvp" class="royal-bg py-24 px-6 relative">
+      <div class="max-w-3xl mx-auto reveal text-center relative z-10">
+        <div class="ornament mx-auto mb-3"></div>
+        <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">RSVP</p>
+        <h2 class="font-hindi text-4xl md:text-5xl gold-foil mt-2 mb-3">
+          कृपया उपस्थिति सूचित करें
+        </h2>
+        <p class="text-ivory/80 mb-10">
+          Your blessings and presence will make our celebration complete.
+        </p>
+
+        <form id="rsvpForm" class="luxury-card p-8 text-left space-y-4">
+          <div>
+            <label class="text-gold text-xs tracking-widest">YOUR NAME</label>
+            <input
+              required
+              type="text"
+              id="guestName"
+              class="w-full mt-1 bg-transparent border border-gold/40 focus:border-gold rounded-lg px-4 py-3 text-ivory outline-none"
+              placeholder="Enter your full name"
+            />
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="text-gold text-xs tracking-widest">GUESTS</label>
+              <input
+                type="number"
+                min="1"
+                value="1"
+                id="guestCount"
+                class="w-full mt-1 bg-transparent border border-gold/40 focus:border-gold rounded-lg px-4 py-3 text-ivory outline-none"
+              />
+            </div>
+            <div>
+              <label class="text-gold text-xs tracking-widest">ATTENDING</label>
+              <select
+                id="guestAttend"
+                class="w-full mt-1 bg-maroonDeep border border-gold/40 focus:border-gold rounded-lg px-4 py-3 text-ivory outline-none"
+              >
+                <option>Yes, with blessings</option>
+                <option>Unable to attend</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="text-gold text-xs tracking-widest"
+              >MESSAGE (OPTIONAL)</label
+            >
+            <textarea
+              id="guestMsg"
+              rows="3"
+              class="w-full mt-1 bg-transparent border border-gold/40 focus:border-gold rounded-lg px-4 py-3 text-ivory outline-none"
+              placeholder="A blessing for the couple..."
+            ></textarea>
+          </div>
+
+          <div class="flex flex-wrap gap-3 pt-2">
+  <button
+    type="submit"
+    class="btn-royal px-6 py-3 rounded-full text-sm tracking-widest text-center w-full sm:w-auto"
+  >
+    💬 WHATSAPP RSVP SEND KAREN
+  </button>
+</div>
+          <p id="rsvpDone" class="hidden text-rose font-script text-2xl pt-3">
+            Thank you! Your blessings have been received. 🌹
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="royal-bg pt-16 pb-8 px-6 relative border-t border-gold/30">
+      <div class="max-w-4xl mx-auto text-center relative z-10">
+        <div class="ornament mx-auto mb-4"></div>
+        <h3 class="font-royal text-2xl gold-foil">Krishna &amp; Priyanka</h3>
+        <p class="font-script text-3xl text-rose mt-1">forever &amp; always</p>
+        <p class="font-hindi text-xl text-ivory mt-3">— गुप्ता परिवार —</p>
+        <p class="text-ivory/60 text-sm mt-2">With love and gratitude</p>
+
+        <div class="mt-8 text-xs text-ivory/40 tracking-widest">
+  © 2026 • Designed with ♥ • 
+  <a 
+    href="https://www.itwebtech.in" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="text-ivory/50 hover:text-gold transition-colors duration-300 underline underline-offset-4"
+  >
+    IT WEB TECH SOLUTION
+  </a>
+</div>
+      </div>
+    </footer>
+
+    <script>
+      /* =========== Invitation door open =========== */
+      const openBtn = document.getElementById("openBtn");
+      const openScreen = document.getElementById("openScreen");
+      const doors = document.getElementById("doors");
+      const music = document.getElementById("bgMusic");
+      const musicBtn = document.getElementById("musicBtn");
+      const eq = document.getElementById("eq");
+
+      openBtn.addEventListener("click", () => {
+        openScreen.style.transition = "opacity .8s ease";
+        openScreen.style.opacity = "0";
+        setTimeout(() => openScreen.remove(), 800);
+
+        doors.classList.add("doors-open");
+        setTimeout(() => doors.remove(), 1800);
+
+        // Start music
+        music.volume = 0.5;
+        music
+          .play()
+          .then(() => {
+            eq.classList.remove("paused");
+          })
+          .catch(() => {});
+
+        // Celebration burst
+        setTimeout(() => fireworks(), 900);
+      });
+
+      /* =========== Music toggle =========== */
+      musicBtn.addEventListener("click", () => {
+        if (music.paused) {
+          music.play();
+          eq.classList.remove("paused");
+        } else {
+          music.pause();
+          eq.classList.add("paused");
+        }
+      });
+
+      /* =========== Fireworks =========== */
+      function fireworks() {
+        const duration = 2200;
+        const end = Date.now() + duration;
+        (function frame() {
+          confetti({
+            particleCount: 5,
+            angle: 60,
+            spread: 70,
+            origin: { x: 0 },
+            colors: ["#D4AF37", "#F5D77A", "#E6B7A9", "#FFF8E7"],
+          });
+          confetti({
+            particleCount: 5,
+            angle: 120,
+            spread: 70,
+            origin: { x: 1 },
+            colors: ["#D4AF37", "#F5D77A", "#E6B7A9", "#FFF8E7"],
+          });
+          if (Date.now() < end) requestAnimationFrame(frame);
+        })();
+      }
+      document.getElementById("fwBtn").addEventListener("click", fireworks);
+
+      /* =========== Falling petals =========== */
+      const petalsArt = ["🌹", "🌸", "🌺", "🏵️", "💮"];
+      function spawnPetal() {
+        const p = document.createElement("div");
+        p.className = "petal";
+        p.textContent = petalsArt[Math.floor(Math.random() * petalsArt.length)];
+        p.style.left = Math.random() * 100 + "vw";
+        p.style.fontSize = 16 + Math.random() * 22 + "px";
+        p.style.animationDuration = 7 + Math.random() * 7 + "s";
+        p.style.opacity = 0.6 + Math.random() * 0.4;
+        document.body.appendChild(p);
+        setTimeout(() => p.remove(), 15000);
+      }
+      setInterval(spawnPetal, 700);
+
+      /* =========== Golden sparkles =========== */
+      function spawnSparkle() {
+        const s = document.createElement("div");
+        s.className = "sparkle";
+        s.style.left = Math.random() * 100 + "vw";
+        s.style.top = 100 + Math.random() * 20 + "vh";
+        s.style.animationDuration = 4 + Math.random() * 4 + "s";
+        document.body.appendChild(s);
+        setTimeout(() => s.remove(), 9000);
+      }
+      setInterval(spawnSparkle, 350);
+
+      /* =========== Scroll reveal =========== */
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("active");
+          });
+        },
+        { threshold: 0.12 },
+      );
+      document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+      /* =========== Countdown =========== */
+      const target = new Date("2026-06-24T10:00:00+05:30").getTime();
+      function tick() {
+        const now = Date.now();
+        let d = Math.max(0, target - now);
+        const days = Math.floor(d / 86400000);
+        d -= days * 86400000;
+        const hrs = Math.floor(d / 3600000);
+        d -= hrs * 3600000;
+        const min = Math.floor(d / 60000);
+        d -= min * 60000;
+        const sec = Math.floor(d / 1000);
+        document.getElementById("cdDays").textContent = String(days).padStart(
+          2,
+          "0",
+        );
+        document.getElementById("cdHours").textContent = String(hrs).padStart(
+          2,
+          "0",
+        );
+        document.getElementById("cdMins").textContent = String(min).padStart(
+          2,
+          "0",
+        );
+        document.getElementById("cdSecs").textContent = String(sec).padStart(
+          2,
+          "0",
+        );
+      }
+      tick();
+      setInterval(tick, 1000);
+
+      /* =========== RSVP submit -> WhatsApp =========== */
+document.getElementById("rsvpForm").addEventListener("submit", (e) => {
+  e.preventDefault(); // पेज को रीफ्रेश होने से रोकने के लिए
+  
+  const name = document.getElementById("guestName").value.trim();
+  const cnt = document.getElementById("guestCount").value;
+  const att = document.getElementById("guestAttend").value;
+  const msg = document.getElementById("guestMsg").value.trim();
+  
+  // सुंदर फॉर्मेट में मैसेज तैयार करना
+  const text = `Namaste! 🙏%0A%0A*RSVP for Krishna %26 Priyanka's Wedding*%0A*Name:* ${encodeURIComponent(name)}%0A*Total Guests:* ${cnt}%0A*Status:* ${encodeURIComponent(att)}%0A*Message:* ${encodeURIComponent(msg)}`;
+  
+  // नए टैब में WhatsApp खोलना
+  window.open(`https://wa.me/918948091103?text=${text}`, "_blank");
+  
+  // स्क्रीन पर थैंक यू मैसेज दिखाना
+  document.getElementById("rsvpDone").classList.remove("hidden");
+  fireworks();
+});
+    </script>
+  </body>
+</html>
