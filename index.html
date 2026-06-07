@@ -281,7 +281,6 @@
           url("./wedding-bg.jpg");
         background-size: cover;
         background-position: center;
-        /* इमेज को और हाईलाइट करने के लिए चमक (Brightness) और कंट्रास्ट बढ़ा दिया है */
         filter: brightness(1.05) contrast(1.02);
       }
 
@@ -451,7 +450,7 @@
       id="openScreen"
       class="fixed inset-0 z-[110] flex flex-col items-center justify-center bg-maroonDeep text-center px-6"
     >
-      <div class="relative w-64 h-64 mb-8">
+      <div class="relative w-64 h-64 mb-6">
         <div class="absolute inset-0 mandala rotate-slow opacity-80"></div>
         <div class="absolute inset-6 mandala rotate-slower opacity-60"></div>
         <div class="absolute inset-0 flex items-center justify-center">
@@ -461,6 +460,13 @@
       <h2 class="font-devanagari text-2xl md:text-3xl gold-foil mb-2">
         ॥ श्री गणेशाय नमः ॥
       </h2>
+      
+      <div id="guestWelcomeContainer" class="hidden text-center mb-4 max-w-md animate-fade-in">
+        <p class="text-gold/80 font-devanagari text-base tracking-widest uppercase">अतिथि विशेष</p>
+        <h3 id="guestNameDisplay" class="font-hindi text-2xl md:text-3xl text-white mt-1 drop-shadow-md"></h3>
+        <div class="w-16 h-[1px] bg-gold/50 mx-auto mt-2"></div>
+      </div>
+
       <p class="text-rose/80 font-script text-3xl mb-8">
         You're cordially invited
       </p>
@@ -639,66 +645,40 @@
         </div>
 
         <div class="max-w-5xl mx-auto">
+          <div class="text-center mb-10">
+            <img
+              src="./couple.png"
+              alt="Krishna & Priyanka"
+              class="w-full max-w-2xl mx-auto rounded-3xl border-4 border-gold shadow-[0_0_40px_rgba(212,175,55,.4)]"
+            />
+          </div>
 
-  <!-- Couple Image -->
-  <div class="text-center mb-10">
-    <img
-      src="./couple.png"
-      alt="Krishna & Priyanka"
-      class="w-full max-w-2xl mx-auto rounded-3xl border-4 border-gold shadow-[0_0_40px_rgba(212,175,55,.4)]"
-    />
-  </div>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="jharokha p-8 text-center">
+              <p class="font-script text-3xl text-rose">The Groom</p>
+              <h3 class="font-royal text-3xl gold-foil mt-2">Krishna Gupta</h3>
+              <p class="font-hindi text-2xl text-ivory mt-1">कृष्णा गुप्ता</p>
+              <p class="text-ivory/80 italic mt-4">
+                “A heart full of dreams, a soul full of love — ready to begin this sacred journey.”
+              </p>
+              <p class="text-gold text-sm tracking-widest mt-4">
+                S/O श्री राजेश गुप्ता & श्रीमती सलावती देवी
+              </p>
+            </div>
 
-  <!-- Details -->
-  <div class="grid md:grid-cols-2 gap-8">
-
-    <!-- Groom -->
-    <div class="jharokha p-8 text-center">
-      <p class="font-script text-3xl text-rose">The Groom</p>
-
-      <h3 class="font-royal text-3xl gold-foil mt-2">
-        Krishna Gupta
-      </h3>
-
-      <p class="font-hindi text-2xl text-ivory mt-1">
-        कृष्णा गुप्ता
-      </p>
-
-      <p class="text-ivory/80 italic mt-4">
-        “A heart full of dreams, a soul full of love —
-        ready to begin this sacred journey.”
-      </p>
-
-      <p class="text-gold text-sm tracking-widest mt-4">
-        S/O श्री राजेश गुप्ता & श्रीमती सलावती देवी
-      </p>
-    </div>
-
-    <!-- Bride -->
-    <div class="jharokha p-8 text-center">
-      <p class="font-script text-3xl text-rose">The Bride</p>
-
-      <h3 class="font-royal text-3xl gold-foil mt-2">
-        Priyanka Gupta
-      </h3>
-
-      <p class="font-hindi text-2xl text-ivory mt-1">
-        प्रियंका गुप्ता
-      </p>
-
-      <p class="text-ivory/80 italic mt-4">
-        “With grace in her steps and love in her eyes —
-        she walks into a new beginning.”
-      </p>
-
-      <p class="text-gold text-sm tracking-widest mt-4">
-        D/O श्री मस्त राज गुप्ता & श्रीमती निर्मला देवी
-      </p>
-    </div>
-
-  </div>
-
-</div>
+            <div class="jharokha p-8 text-center">
+              <p class="font-script text-3xl text-rose">The Bride</p>
+              <h3 class="font-royal text-3xl gold-foil mt-2">Priyanka Gupta</h3>
+              <p class="font-hindi text-2xl text-ivory mt-1">प्रियंका गुप्ता</p>
+              <p class="text-ivory/80 italic mt-4">
+                “With grace in her steps and love in her eyes — she walks into a new beginning.”
+              </p>
+              <p class="text-gold text-sm tracking-widest mt-4">
+                D/O श्री मस्त राज गुप्ता & श्रीमती निर्मला देवी
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -706,31 +686,16 @@
       <div class="max-w-4xl mx-auto reveal text-center relative z-10">
         <div class="luxury-card p-10 md:p-14">
           <div class="ornament mx-auto mb-4"></div>
-          <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">
-            INVITATION
+          <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">INVITATION</p>
+          <h2 class="font-hindi text-4xl md:text-5xl gold-foil mt-2 mb-8">शुभ विवाह आमंत्रण</h2>
+          <p class="font-devanagari text-lg md:text-xl text-ivory leading-loose">
+            परमपिता परमेश्वर की असीम अनुकंपा एवं बड़ों के आशीर्वाद स्वरूप, हमारे जीवन के इस नवीन स्वर्णिम अध्याय की मंगल वेला में हम आपको सपरिवार सादर आमंत्रित करते हैं।
           </p>
-          <h2 class="font-hindi text-4xl md:text-5xl gold-foil mt-2 mb-8">
-            शुभ विवाह आमंत्रण
-          </h2>
-
-          <p
-            class="font-devanagari text-lg md:text-xl text-ivory leading-loose"
-          >
-            परमपिता परमेश्वर की असीम अनुकंपा एवं बड़ों के आशीर्वाद स्वरूप, हमारे
-            जीवन के इस नवीन स्वर्णिम अध्याय की मंगल वेला में हम आपको सपरिवार
-            सादर आमंत्रित करते हैं।
-          </p>
-          <div class="my-6 divider">
-            <span class="line"></span>✦<span class="line"></span>
-          </div>
+          <div class="my-6 divider"><span class="line"></span>✦<span class="line"></span></div>
           <p class="text-ivory/90 italic max-w-2xl mx-auto">
-            With the blessings of the Almighty and our elders, we joyfully
-            invite you and your family to grace the wedding celebrations of our
-            beloved children — and shower them with your love.
+            With the blessings of the Almighty and our elders, we joyfully invite you and your family to grace the wedding celebrations of our beloved children — and shower them with your love.
           </p>
-          <p class="mt-6 text-gold font-script text-2xl">
-            🙏 आपका आगमन हमारे लिए परम सौभाग्य होगा 🙏
-          </p>
+          <p class="mt-6 text-gold font-script text-2xl">🙏 आपका आगमन हमारे लिए परम सौभाग्य होगा 🙏</p>
         </div>
       </div>
     </section>
@@ -739,88 +704,53 @@
       <div class="max-w-5xl mx-auto reveal relative z-10">
         <div class="text-center mb-14">
           <div class="ornament mx-auto mb-3"></div>
-          <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">
-            OUR LOVE STORY
-          </p>
-          <h2 class="font-hindi text-4xl md:text-5xl gold-foil mt-2">
-            हमारी प्रेम कहानी
-          </h2>
+          <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">OUR LOVE STORY</p>
+          <h2 class="font-hindi text-4xl md:text-5xl gold-foil mt-2">हमारी प्रेम कहानी</h2>
         </div>
 
         <div class="relative">
-          <div
-            class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] timeline-line hidden md:block"
-          ></div>
-
+          <div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] timeline-line hidden md:block"></div>
           <div class="space-y-10">
             <div class="md:grid md:grid-cols-2 md:gap-10 items-center">
               <div class="luxury-card p-6 md:text-right">
-                <p class="text-gold font-royal tracking-widest text-xs">
-                  FIRST MEETING
-                </p>
-                <h4 class="font-hindi text-2xl text-ivory mt-1">
-                  पहली मुलाकात
-                </h4>
+                <p class="text-gold font-royal tracking-widest text-xs">FIRST MEETING</p>
+                <h4 class="font-hindi text-2xl text-ivory mt-1">पहली मुलाकात</h4>
                 <p class="text-gold text-sm font-bold mt-1">7 July 2020</p>
                 <p class="text-ivory/80 mt-2">
-                  Limewood Cafe में कॉफ़ी पर एक प्यारी और अनजानी मुलाकात — जहाँ
-                  दो निगाहें मिलीं, एक शर्मीली मुस्कान आई और कहानी की खूबसूरत
-                  शुरुआत हुई।
+                  Limewood Cafe में कॉफ़ी पर एक प्यारी और अनजानी मुलाकात — जहाँ दो निगाहें मिलीं, एक शर्मीली मुस्कान आई और कहानी की खूबसूरत शुरुआत हुई।
                 </p>
               </div>
-              <div class="hidden md:flex justify-start pl-6">
-                <span class="text-5xl">🌹</span>
-              </div>
+              <div class="hidden md:flex justify-start pl-6"><span class="text-5xl">🌹</span></div>
             </div>
             <div class="md:grid md:grid-cols-2 md:gap-10 items-center">
-              <div class="hidden md:flex justify-end pr-6">
-                <span class="text-5xl">💌</span>
-              </div>
+              <div class="hidden md:flex justify-end pr-6"><span class="text-5xl">💌</span></div>
               <div class="luxury-card p-6">
-                <p class="text-gold font-royal tracking-widest text-xs">
-                  FALLING IN LOVE
-                </p>
-                <h4 class="font-hindi text-2xl text-ivory mt-1">
-                  प्यार की शुरुआत
-                </h4>
+                <p class="text-gold font-royal tracking-widest text-xs">FALLING IN LOVE</p>
+                <h4 class="font-hindi text-2xl text-ivory mt-1">प्यार की शुरुआत</h4>
                 <p class="text-ivory/80 mt-2">
-                  लंबे फोन कॉल्स, साझा किए गए सपने और देर रात तक चलने वाली
-                  हँसी-मज़ाक — हर बातचीत ने दिलों को और करीब ला दिया।
+                  लंबे फोन कॉल्स, साझा किए गए सपने और देर रात तक चलने वाली हँसी-मज़ाक — हर बातचीत ने दिलों को और करीब ला दिया।
                 </p>
               </div>
             </div>
             <div class="md:grid md:grid-cols-2 md:gap-10 items-center">
               <div class="luxury-card p-6 md:text-right">
-                <p class="text-gold font-royal tracking-widest text-xs">
-                  THE PROPOSAL
-                </p>
-                <h4 class="font-hindi text-2xl text-ivory mt-1">
-                  सगाई
-                </h4>
+                <p class="text-gold font-royal tracking-widest text-xs">THE PROPOSAL</p>
+                <h4 class="font-hindi text-2xl text-ivory mt-1">सगाई</h4>
                 <p class="text-gold text-sm font-bold mt-1">27 November 2025</p>
                 <p class="text-ivory/80 mt-2">
-                  पूरे परिवार की गरिमामयी उपस्थिति और आशीर्वाद के साथ एक अटूट
-                  वादा किया गया — जीवन के हर मौसम में एक-दूसरे का हाथ थामकर चलने
-                  का।
+                  पूरे परिवार की गरिमामयी उपस्थिति और आशीर्वाद के साथ एक अटूट वादा किया गया — जीवन के हर मौसम में एक-दूसरे का हाथ थामकर चलने का।
                 </p>
               </div>
-              <div class="hidden md:flex justify-start pl-6">
-                <span class="text-5xl">💍</span>
-              </div>
+              <div class="hidden md:flex justify-start pl-6"><span class="text-5xl">💍</span></div>
             </div>
             <div class="md:grid md:grid-cols-2 md:gap-10 items-center">
-              <div class="hidden md:flex justify-end pr-6">
-                <span class="text-5xl">👑</span>
-              </div>
+              <div class="hidden md:flex justify-end pr-6"><span class="text-5xl">👑</span></div>
               <div class="luxury-card p-6">
-                <p class="text-gold font-royal tracking-widest text-xs">
-                  FOREVER BEGINS
-                </p>
+                <p class="text-gold font-royal tracking-widest text-xs">FOREVER BEGINS</p>
                 <h4 class="font-hindi text-2xl text-ivory mt-1">सात फेरे</h4>
                 <p class="text-gold text-sm font-bold mt-1">24 June 2026</p>
                 <p class="text-ivory/80 mt-2">
-                  और अब, पूरे परिवार के अपार स्नेह और दुआओं के साये में — दो
-                  पवित्र आत्माएँ सात जन्मों के पावन बंधन में बंधने जा रही हैं।
+                  और अब, पूरे परिवार के अपार स्नेह और दुआओं के साये में — दो पवित्र आत्माएँ सात जन्मों के पावन बंधन में बंधने जा रही हैं।
                 </p>
               </div>
             </div>
@@ -833,72 +763,42 @@
       <div class="max-w-7xl mx-auto reveal relative z-10">
         <div class="text-center mb-14">
           <div class="ornament mx-auto mb-3"></div>
-          <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">
-            CELEBRATIONS
-          </p>
-          <h2 class="font-hindi text-4xl md:text-5xl gold-foil mt-2">
-            उत्सव कार्यक्रम
-          </h2>
+          <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">CELEBRATIONS</p>
+          <h2 class="font-hindi text-4xl md:text-5xl gold-foil mt-2">उत्सव कार्यक्रम</h2>
         </div>
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-6 max-w-4xl mx-auto">
           <div class="luxury-card p-7 text-center">
             <div class="text-5xl mb-3">🔱</div>
-            <p class="font-royal text-gold tracking-widest text-xs">
-              TILAK CEREMONY
-            </p>
+            <p class="font-royal text-gold tracking-widest text-xs">TILAK CEREMONY</p>
             <h4 class="font-hindi text-2xl text-ivory mt-1">शुभ तिलक समारोह</h4>
             <p class="text-rose mt-3">21 June 2026 • दिन रविवार</p>
-            <p class="text-ivory/70 text-sm mt-2">
-              📍 ग्राम + पोस्ट - शेखवानिया बुजुर्ग, कुशीनगर
-            </p>
+            <p class="text-ivory/70 text-sm mt-2">📍 ग्राम + पोस्ट - शेखवानिया बुजुर्ग, कुशीनगर</p>
           </div>
 
           <div class="luxury-card p-7 text-center">
             <div class="text-5xl mb-3">🌼</div>
-            <p class="font-royal text-gold tracking-widest text-xs">
-              HALDI CEREMONY
-            </p>
-            <h4 class="font-hindi text-2xl text-ivory mt-1">
-              शुभ हल्दी समारोह
-            </h4>
+            <p class="font-royal text-gold tracking-widest text-xs">HALDI CEREMONY</p>
+            <h4 class="font-hindi text-2xl text-ivory mt-1">शुभ हल्दी समारोह</h4>
             <p class="text-rose mt-3">23 June 2026 • दिन मंगलवार</p>
-            <p class="text-ivory/70 text-sm mt-2">
-              📍 ग्राम + पोस्ट - शेखवानिया बुजुर्ग, कुशीनगर
-            </p>
+            <p class="text-ivory/70 text-sm mt-2">📍 ग्राम + पोस्ट - शेखवानिया बुजुर्ग, कुशीनगर</p>
           </div>
 
-          <div
-            class="luxury-card p-7 text-center border-2 border-goldLight relative"
-          >
-            <span
-              class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-maroonDeep text-[10px] font-bold tracking-widest px-3 py-1 rounded-full"
-              >MAIN DAY</span
-            >
+          <div class="luxury-card p-7 text-center border-2 border-goldLight relative">
+            <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-maroonDeep text-[10px] font-bold tracking-widest px-3 py-1 rounded-full">MAIN DAY</span>
             <div class="text-5xl mb-3">👑</div>
-            <p class="font-royal text-gold tracking-widest text-xs">
-              WEDDING CEREMONY
-            </p>
-            <h4 class="font-hindi text-2xl text-ivory mt-1">
-              शुभ विवाह संस्कार
-            </h4>
+            <p class="font-royal text-gold tracking-widest text-xs">WEDDING CEREMONY</p>
+            <h4 class="font-hindi text-2xl text-ivory mt-1">शुभ विवाह संस्कार</h4>
             <p class="text-rose mt-3">24 June 2026 • दिन बुधवार</p>
-            <p class="text-ivory/70 text-sm mt-2">
-              📍 विदाई स्थल: ग्राम - नौगांव
-            </p>
-            <p
-              class="text-rose/80 text-xs mt-2 border-t border-gold/20 pt-2 font-devanagari"
-            >
-              🚌 बारात हमारे निवास स्थान से शाम 5 बजे चल के सपहा होते हुए नौगांव
-              ग्राम में जाएगी।
+            <p class="text-ivory/70 text-sm mt-2">📍 विदाई स्थल: ग्राम - नौगांव</p>
+            <p class="text-rose/80 text-xs mt-2 border-t border-gold/20 pt-2 font-devanagari">
+              🚌 बारात हमारे निवास स्थान से शाम 5 बजे चल के सपहा होते हुए नौगांव ग्राम में जाएगी।
             </p>
           </div>
 
           <div class="luxury-card p-7 text-center">
             <div class="text-5xl mb-3">🌸</div>
-            <p class="font-royal text-gold tracking-widest text-xs">
-              VIDAI CEREMONY
-            </p>
+            <p class="font-royal text-gold tracking-widest text-xs">VIDAI CEREMONY</p>
             <h4 class="font-hindi text-2xl text-ivory mt-1">शुभ विदाई</h4>
             <p class="text-rose mt-3">25 June 2026 • दिन गुरुवार</p>
             <p class="text-ivory/70 text-sm mt-2">📍 नौगांव ग्राम से विदाई</p>
@@ -911,102 +811,47 @@
       <div class="max-w-6xl mx-auto reveal relative z-10">
         <div class="text-center mb-14">
           <div class="ornament mx-auto mb-3"></div>
-          <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">
-            OUR FAMILIES
-          </p>
-          <h2 class="font-hindi text-4xl md:text-5xl gold-foil mt-2">
-            परिवार परिचय
-          </h2>
+          <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">OUR FAMILIES</p>
+          <h2 class="font-hindi text-4xl md:text-5xl gold-foil mt-2">परिवार परिचय</h2>
         </div>
 
         <div class="grid md:grid-cols-2 gap-8">
           <div class="luxury-card p-8">
-            <h3 class="font-royal text-2xl gold-foil text-center">
-              Groom's Family
-            </h3>
-            <p class="text-rose text-center font-hindi text-xl mb-6">
-              वर पक्ष (शेखवानिया बुजुर्ग)
-            </p>
-            <ul
-              class="space-y-3 text-ivory/90 font-devanagari text-sm md:text-base"
-            >
-              <li class="flex justify-between border-b border-gold/20 pb-2">
-                <span>पिता:</span
-                ><span class="text-gold">श्री राजेश गुप्ता</span>
-              </li>
-              <li class="flex justify-between border-b border-gold/20 pb-2">
-                <span>माता:</span
-                ><span class="text-gold">श्रीमती सलावती देवी</span>
-              </li>
-              <li class="flex justify-between border-b border-gold/20 pb-2">
-                <span>ग्राम + पोस्ट:</span
-                ><span class="text-gold">शेखवानिया बुजुर्ग</span>
-              </li>
-              <li class="flex justify-between border-b border-gold/20 pb-2">
-                <span>थाना / तहसील:</span
-                ><span class="text-gold">कुबेरस्थान / कसया</span>
-              </li>
-              <li class="flex justify-between border-b border-gold/20 pb-2">
-                <span>जिला / पिन:</span
-                ><span class="text-gold">कुशीनगर, UP (274402)</span>
-              </li>
+            <h3 class="font-royal text-2xl gold-foil text-center">Groom's Family</h3>
+            <p class="text-rose text-center font-hindi text-xl mb-6">वर पक्ष (शेखवानिया बुजुर्ग)</p>
+            <ul class="space-y-3 text-ivory/90 font-devanagari text-sm md:text-base">
+              <li class="flex justify-between border-b border-gold/20 pb-2"><span>पिता:</span><span class="text-gold">श्री राजेश गुप्ता</span></li>
+              <li class="flex justify-between border-b border-gold/20 pb-2"><span>माता:</span><span class="text-gold">श्रीमती सलावती देवी</span></li>
+              <li class="flex justify-between border-b border-gold/20 pb-2"><span>ग्राम + पोस्ट:</span><span class="text-gold">शेखवानिया बुजुर्ग</span></li>
+              <li class="flex justify-between border-b border-gold/20 pb-2"><span>थाना / तहसील:</span><span class="text-gold">कुबेरस्थान / कसया</span></li>
+              <li class="flex justify-between border-b border-gold/20 pb-2"><span>जिला / पिन:</span><span class="text-gold">कुशीनगर, UP (274402)</span></li>
               <li class="border-b border-gold/20 pb-2">
-                <span class="block text-rose font-bold mb-1"
-                  >दर्शन अभिलाषी:</span
-                >
-                <span class="text-gold block text-right"
-                  >अशोक गुप्ता, दुर्गेश गुप्ता, सूरज गुप्ता, रोहित गुप्ता, पंकज
-                  गुप्ता</span
-                >
+                <span class="block text-rose font-bold mb-1">दर्शन अभिलाषी:</span>
+                <span class="text-gold block text-right">अशोक गुप्ता, दुर्गेश गुप्ता, सूरज गुप्ता, रोहित गुप्ता, पंकज गुप्ता</span>
               </li>
               <li>
                 <span class="block text-rose font-bold mb-1">बाल आग्रह:</span>
-                <span class="text-gold block text-right"
-                  >परी गुप्ता, आयुष गुप्ता 🧒🌸</span
-                >
+                <span class="text-gold block text-right">परी गुप्ता, आयुष गुप्ता 🧒🌸</span>
               </li>
             </ul>
           </div>
 
           <div class="luxury-card p-8">
-            <h3 class="font-royal text-2xl gold-foil text-center">
-              Bride's Family
-            </h3>
-            <p class="text-rose text-center font-hindi text-xl mb-6">
-              वधू पक्ष (नौगांव)
-            </p>
-            <ul
-              class="space-y-3 text-ivory/90 font-devanagari text-sm md:text-base"
-            >
-              <li class="flex justify-between border-b border-gold/20 pb-2">
-                <span>पिता:</span
-                ><span class="text-gold">श्री मस्त राज गुप्ता</span>
-              </li>
-              <li class="flex justify-between border-b border-gold/20 pb-2">
-                <span>माता:</span
-                ><span class="text-gold">श्रीमती निर्मला देवी</span>
-              </li>
-              <li class="flex justify-between border-b border-gold/20 pb-2">
-                <span>ग्राम:</span><span class="text-gold">नौगांव</span>
-              </li>
-              <li class="flex justify-between border-b border-gold/20 pb-2">
-                <span>पोस्ट:</span
-                ><span class="text-gold">शेखवानिया बुजुर्ग</span>
-              </li>
-              <li class="flex justify-between border-b border-gold/20 pb-2">
-                <span>थाना:</span><span class="text-gold">कसया</span>
-              </li>
-              <li class="flex justify-between">
-                <span>जिला / पिन:</span
-                ><span class="text-gold">कुशीनगर, UP (274402)</span>
-              </li>
+            <h3 class="font-royal text-2xl gold-foil text-center">Bride's Family</h3>
+            <p class="text-rose text-center font-hindi text-xl mb-6">वधू पक्ष (नौगांव)</p>
+            <ul class="space-y-3 text-ivory/90 font-devanagari text-sm md:text-base">
+              <li class="flex justify-between border-b border-gold/20 pb-2"><span>पिता:</span><span class="text-gold">श्री मस्त राज गुप्ता</span></li>
+              <li class="flex justify-between border-b border-gold/20 pb-2"><span>माता:</span><span class="text-gold">श्रीमती निर्मला देवी</span></li>
+              <li class="flex justify-between border-b border-gold/20 pb-2"><span>ग्राम:</span><span class="text-gold">नौगांव</span></li>
+              <li class="flex justify-between border-b border-gold/20 pb-2"><span>पोस्ट:</span><span class="text-gold">शेखवानिया बुजुर्ग</span></li>
+              <li class="flex justify-between border-b border-gold/20 pb-2"><span>थाना:</span><span class="text-gold">कसया</span></li>
+              <li class="flex justify-between"><span>जिला / पिन:</span><span class="text-gold">कुशीनगर, UP (274402)</span></li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ VENUE + MAP ============ -->
     <section class="royal-bg py-12 md:py-24 px-4 md:px-6 relative">
       <div class="max-w-6xl mx-auto reveal grid md:grid-cols-2 gap-8 items-stretch relative z-10">
         <div class="luxury-card p-8">
@@ -1014,14 +859,12 @@
           <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">VENUE DETAILS</p>
           <h2 class="font-hindi text-3xl md:text-4xl gold-foil mt-1">विवाह एवं बारात स्थल</h2>
           
-          <!-- वर पक्ष की जानकारी -->
           <div class="mt-6 border-b border-gold/20 pb-4">
             <p class="text-rose text-sm font-royal tracking-widest uppercase">From (वर पक्ष निवास):</p>
             <p class="text-ivory font-bold font-devanagari mt-0.5">ग्राम + पोस्ट - शेखवानिया बुजुर्ग</p>
             <p class="text-ivory/70 text-xs font-devanagari">थाना - कुबेरस्थान, तहसील - कसया, जिला - कुशीनगर</p>
           </div>
 
-          <!-- वधू पक्ष / मुख्य विवाह स्थल की जानकारी -->
           <div class="mt-4">
             <p class="text-gold text-sm font-royal tracking-widest uppercase">To / Main Venue (वधू पक्ष):</p>
             <p class="text-ivory font-bold font-devanagari mt-0.5">ग्राम - नौगांव (विवाह स्थल)</p>
@@ -1034,15 +877,18 @@
             <p>👑 <span class="text-gold">पाणिग्रहण संस्कार: शुभ विवाह वेला</span></p>
           </div>
 
-          <!-- आपके द्वारा दिए गए नौगांव के सटीक लिंक को अपडेट कर दिया गया है -->
           <a href="https://maps.app.goo.gl/nETwJ5dJPtBrifcW7" target="_blank" rel="noopener" class="mt-8 inline-block btn-royal px-6 py-3 rounded-full text-sm tracking-widest">
             📍 GET DIRECTIONS TO NAUGAWAN
           </a>
         </div>
 
         <div class="luxury-card p-2 overflow-hidden">
-          <!-- एम्बेड मैप को पूरे नौगांव क्षेत्र को कवर करने के लिए सटीक कोऑर्डिनेट्स और ज़ूम लेवल (14z) पर सेट किया गया है -->
-          <iframe class="w-full h-full min-h-[400px] rounded-xl border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14227.18925575553!2d83.8196552!3d27.0985095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3994096d956ce7ff%3A0x6e4b9749459f61a0!2sNaugawan%2C+Uttar+Pradesh!5e0!3m2!1shi!2sin!4v1717750000000!5m2!1shi!2sin"></iframe>
+          <iframe 
+            class="w-full h-full min-h-[400px] rounded-xl border-0" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3567.874404098495!2d83.97503967630485!3d26.76832879712134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399393006d69be2f%3A0xff8ca1ae50b9e8f6!2sRaj+Bahadur+Gupta+Naugawan!5e0!3m2!1shi!2sin!4v1717750000000!5m2!1shi!2sin">
+          </iframe>
         </div>
       </div>
     </section>
@@ -1050,39 +896,24 @@
     <section class="royal-bg py-12 md:py-24 px-4 md:px-6 relative">
       <div class="max-w-5xl mx-auto reveal text-center relative z-10">
         <div class="ornament mx-auto mb-3"></div>
-        <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">
-          COUNTDOWN TO FOREVER
-        </p>
-        <h2 class="font-hindi text-4xl md:text-5xl gold-foil mt-2 mb-10">
-          शुभ घड़ी की प्रतीक्षा
-        </h2>
+        <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">COUNTDOWN TO FOREVER</p>
+        <h2 class="font-hindi text-4xl md:text-5xl gold-foil mt-2 mb-10">शुभ घड़ी की प्रतीक्षा</h2>
 
-        <div
-          id="countdown"
-          class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
-        >
+        <div id="countdown" class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           <div class="luxury-card py-6">
-            <div id="cdDays" class="font-royal text-4xl md:text-6xl gold-foil">
-              00
-            </div>
+            <div id="cdDays" class="font-royal text-4xl md:text-6xl gold-foil">00</div>
             <p class="text-gold text-xs tracking-widest mt-2">DAYS</p>
           </div>
           <div class="luxury-card py-6">
-            <div id="cdHours" class="font-royal text-4xl md:text-6xl gold-foil">
-              00
-            </div>
+            <div id="cdHours" class="font-royal text-4xl md:text-6xl gold-foil">00</div>
             <p class="text-gold text-xs tracking-widest mt-2">HOURS</p>
           </div>
           <div class="luxury-card py-6">
-            <div id="cdMins" class="font-royal text-4xl md:text-6xl gold-foil">
-              00
-            </div>
+            <div id="cdMins" class="font-royal text-4xl md:text-6xl gold-foil">00</div>
             <p class="text-gold text-xs tracking-widest mt-2">MINUTES</p>
           </div>
           <div class="luxury-card py-6">
-            <div id="cdSecs" class="font-royal text-4xl md:text-6xl gold-foil">
-              00
-            </div>
+            <div id="cdSecs" class="font-royal text-4xl md:text-6xl gold-foil">00</div>
             <p class="text-gold text-xs tracking-widest mt-2">SECONDS</p>
           </div>
         </div>
@@ -1093,70 +924,34 @@
       <div class="max-w-7xl mx-auto reveal relative z-10">
         <div class="text-center mb-12">
           <div class="ornament mx-auto mb-3"></div>
-          <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">
-            MOMENTS
-          </p>
-          <h2 class="font-hindi text-4xl md:text-5xl gold-foil mt-2">
-            यादगार पल
-          </h2>
+          <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">MOMENTS</p>
+          <h2 class="font-hindi text-4xl md:text-5xl gold-foil mt-2">यादगार पल</h2>
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           <div class="overflow-hidden rounded-xl border border-gold/40">
-            <img
-              class="gallery-img w-full h-56 object-cover"
-              src="https://images.unsplash.com/photo-1583939411023-14783179e581?q=80&w=600&auto=format&fit=crop"
-              alt=""
-            />
+            <img class="gallery-img w-full h-56 object-cover" src="https://images.unsplash.com/photo-1583939411023-14783179e581?q=80&w=600&auto=format&fit=crop" alt="" />
           </div>
           <div class="overflow-hidden rounded-xl border border-gold/40">
-            <img
-              class="gallery-img w-full h-56 object-cover"
-              src="./luwadlin-bosman-WAVA6ZbothA-unsplash.jpg"
-              alt=""
-            />
+            <img class="gallery-img w-full h-56 object-cover" src="./luwadlin-bosman-WAVA6ZbothA-unsplash.jpg" alt="" />
           </div>
           <div class="overflow-hidden rounded-xl border border-gold/40">
-            <img
-              class="gallery-img w-full h-56 object-cover"
-              src="./krishna.png"
-              alt=""
-            />
+            <img class="gallery-img w-full h-56 object-cover" src="./krishna.png" alt="" />
           </div>
           <div class="overflow-hidden rounded-xl border border-gold/40">
-            <img
-              class="gallery-img w-full h-56 object-cover"
-              src="https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=600&auto=format&fit=crop"
-              alt=""
-            />
+            <img class="gallery-img w-full h-56 object-cover" src="https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=600&auto=format&fit=crop" alt="" />
           </div>
           <div class="overflow-hidden rounded-xl border border-gold/40">
-            <img
-              class="gallery-img w-full h-56 object-cover"
-              src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?q=80&w=600&auto=format&fit=crop"
-              alt=""
-            />
+            <img class="gallery-img w-full h-56 object-cover" src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?q=80&w=600&auto=format&fit=crop" alt="" />
           </div>
           <div class="overflow-hidden rounded-xl border border-gold/40">
-            <img
-              class="gallery-img w-full h-56 object-cover"
-              src="./couple.png"
-              alt=""
-            />
+            <img class="gallery-img w-full h-56 object-cover" src="./couple.png" alt="" />
           </div>
           <div class="overflow-hidden rounded-xl border border-gold/40">
-            <img
-              class="gallery-img w-full h-56 object-cover"
-              src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600&auto=format&fit=crop"
-              alt=""
-            />
+            <img class="gallery-img w-full h-56 object-cover" src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600&auto=format&fit=crop" alt="" />
           </div>
           <div class="overflow-hidden rounded-xl border border-gold/40">
-            <img
-              class="gallery-img w-full h-56 object-cover"
-              src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=600&auto=format&fit=crop"
-              alt=""
-            />
+            <img class="gallery-img w-full h-56 object-cover" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=600&auto=format&fit=crop" alt="" />
           </div>
         </div>
       </div>
@@ -1165,28 +960,19 @@
     <section class="royal-bg py-12 md:py-24 px-4 md:px-6 relative">
       <div class="max-w-4xl mx-auto reveal text-center relative z-10">
         <div class="ornament mx-auto mb-3"></div>
-        <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">
-          BLESSINGS
-        </p>
-        <h2 class="font-hindi text-4xl md:text-5xl gold-foil mt-2 mb-8">
-          शुभ आशीर्वाद
-        </h2>
+        <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">BLESSINGS</p>
+        <h2 class="font-hindi text-4xl md:text-5xl gold-foil mt-2 mb-8">शुभ आशीर्वाद</h2>
 
         <div class="luxury-card p-10">
-          <p
-            class="font-devanagari text-xl md:text-2xl text-ivory leading-loose"
-          >
+          <p class="font-devanagari text-xl md:text-2xl text-ivory leading-loose">
             “मंत्रों की गूंज से महकेगा गृहस्थ जीवन का आँगन,<br />
             स्नेह और विश्वास से अटूट रहेगा यह सुंदर बंधन।<br />
             आकर देवें अपना आशीष इस पावन बेला पर आप,<br />
             धन्य हो जाएगा हमारे बच्चों का यह नया जीवन।”
           </p>
-          <div class="mt-6 divider">
-            <span class="line"></span>🪷<span class="line"></span>
-          </div>
+          <div class="mt-6 divider"><span class="line"></span>🪷<span class="line"></span></div>
           <p class="italic text-ivory/80 mt-4">
-            May the divine grace of the Almighty bless this sacred union with
-            eternal love, peace, and prosperity.
+            May the divine grace of the Almighty bless this sacred union with eternal love, peace, and prosperity.
           </p>
         </div>
       </div>
@@ -1196,69 +982,38 @@
       <div class="max-w-3xl mx-auto reveal text-center relative z-10">
         <div class="ornament mx-auto mb-3"></div>
         <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">RSVP</p>
-        <h2 class="font-hindi text-4xl md:text-5xl gold-foil mt-2 mb-3">
-          कृपया उपस्थिति सूचित करें
-        </h2>
-        <p class="text-ivory/80 mb-10">
-          Your blessings and presence will make our celebration complete.
-        </p>
+        <h2 class="font-hindi text-4xl md:text-5xl gold-foil mt-2 mb-3">कृपया उपस्थिति सूचित करें</h2>
+        <p class="text-ivory/80 mb-10">Your blessings and presence will make our celebration complete.</p>
 
         <form id="rsvpForm" class="luxury-card p-8 text-left space-y-4">
           <div>
             <label class="text-gold text-xs tracking-widest">YOUR NAME</label>
-            <input
-              required
-              type="text"
-              id="guestName"
-              class="w-full mt-1 bg-transparent border border-gold/40 focus:border-gold rounded-lg px-4 py-3 text-ivory outline-none"
-              placeholder="Enter your full name"
-            />
+            <input required type="text" id="guestName" class="w-full mt-1 bg-transparent border border-gold/40 focus:border-gold rounded-lg px-4 py-3 text-ivory outline-none" placeholder="Enter your full name" />
           </div>
           <div class="grid sm:grid-cols-2 gap-4">
             <div>
               <label class="text-gold text-xs tracking-widest">GUESTS</label>
-              <input
-                type="number"
-                min="1"
-                value="1"
-                id="guestCount"
-                class="w-full mt-1 bg-transparent border border-gold/40 focus:border-gold rounded-lg px-4 py-3 text-ivory outline-none"
-              />
+              <input type="number" min="1" value="1" id="guestCount" class="w-full mt-1 bg-transparent border border-gold/40 focus:border-gold rounded-lg px-4 py-3 text-ivory outline-none" />
             </div>
             <div>
               <label class="text-gold text-xs tracking-widest">ATTENDING</label>
-              <select
-                id="guestAttend"
-                class="w-full mt-1 bg-maroonDeep border border-gold/40 focus:border-gold rounded-lg px-4 py-3 text-ivory outline-none"
-              >
+              <select id="guestAttend" class="w-full mt-1 bg-maroonDeep border border-gold/40 focus:border-gold rounded-lg px-4 py-3 text-ivory outline-none">
                 <option>Yes, with blessings</option>
                 <option>Unable to attend</option>
               </select>
             </div>
           </div>
           <div>
-            <label class="text-gold text-xs tracking-widest"
-              >MESSAGE (OPTIONAL)</label
-            >
-            <textarea
-              id="guestMsg"
-              rows="3"
-              class="w-full mt-1 bg-transparent border border-gold/40 focus:border-gold rounded-lg px-4 py-3 text-ivory outline-none"
-              placeholder="A blessing for the couple..."
-            ></textarea>
+            <label class="text-gold text-xs tracking-widest">MESSAGE (OPTIONAL)</label>
+            <textarea id="guestMsg" rows="3" class="w-full mt-1 bg-transparent border border-gold/40 focus:border-gold rounded-lg px-4 py-3 text-ivory outline-none" placeholder="A blessing for the couple..."></textarea>
           </div>
 
           <div class="flex flex-wrap gap-3 pt-2">
-            <button
-              type="submit"
-              class="btn-royal px-6 py-3 rounded-full text-sm tracking-widest text-center w-full sm:w-auto"
-            >
+            <button type="submit" class="btn-royal px-6 py-3 rounded-full text-sm tracking-widest text-center w-full sm:w-auto">
               💬 WHATSAPP RSVP SEND KAREN
             </button>
           </div>
-          <p id="rsvpDone" class="hidden text-rose font-script text-2xl pt-3">
-            Thank you! Your blessings have been received. 🌹
-          </p>
+          <p id="rsvpDone" class="hidden text-rose font-script text-2xl pt-3">Thank you! Your blessings have been received. 🌹</p>
         </form>
       </div>
     </section>
@@ -1273,12 +1028,7 @@
 
         <div class="mt-8 text-xs text-ivory/40 tracking-widest">
           © 2026 • Designed with ♥ •
-          <a
-            href="https://www.itwebtech.in"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-ivory/50 hover:text-gold transition-colors duration-300 underline underline-offset-4"
-          >
+          <a href="https://www.itwebtech.in" target="_blank" rel="noopener noreferrer" class="text-ivory/50 hover:text-gold transition-colors duration-300 underline underline-offset-4">
             IT WEB TECH SOLUTION
           </a>
         </div>
@@ -1286,6 +1036,40 @@
     </footer>
 
     <script>
+      /* =========== URL Query Params से नाम निकालने का लॉजिक =========== */
+      function getGuestName() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const nameParam = urlParams.get('name');
+        
+        if (nameParam) {
+          // अंडरस्कोर (_) को स्पेस ( ) से रिप्लेस करना
+          let formattedName = nameParam.replace(/_/g, ' ');
+          
+          // वैकल्पिक: नाम के हर शब्द के पहले अक्षर को कैपिटल (Capitalize) करना (जैसे: vinay gupta -> Vinay Gupta)
+          formattedName = formattedName.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+          
+          return formattedName;
+        }
+        return null;
+      }
+
+      // पेज लोड होने पर नाम को फ्रंट-पेज पर सेट करना
+      const guestName = getGuestName();
+      if (guestName) {
+        const welcomeContainer = document.getElementById("guestWelcomeContainer");
+        const nameDisplay = document.getElementById("guestNameDisplay");
+        const rsvpInputName = document.getElementById("guestName");
+        
+        // प्रथम पेज (Open Screen) पर नाम दिखाना
+        nameDisplay.textContent = "स्नेही, " + guestName;
+        welcomeContainer.classList.remove("hidden");
+        
+        // RSVP फॉर्म में भी नाम ऑटोमैटिक भर देना
+        if (rsvpInputName) {
+          rsvpInputName.value = guestName;
+        }
+      }
+
       /* =========== Invitation door open & Scroll Fixing =========== */
       const openBtn = document.getElementById("openBtn");
       const openScreen = document.getElementById("openScreen");
@@ -1302,10 +1086,8 @@
         doors.classList.add("doors-open");
         setTimeout(() => doors.remove(), 1800);
 
-        // ज़बरदस्ती पेज को लोड होने पर सबसे ऊपर (Top) स्क्रॉल कर देता है
         window.scrollTo({ top: 0, behavior: "smooth" });
 
-        // Start music
         music.volume = 0.5;
         music
           .play()
@@ -1314,7 +1096,6 @@
           })
           .catch(() => {});
 
-        // Celebration burst
         setTimeout(() => fireworks(), 900);
       });
 
@@ -1403,22 +1184,10 @@
         const min = Math.floor(d / 60000);
         d -= min * 60000;
         const sec = Math.floor(d / 1000);
-        document.getElementById("cdDays").textContent = String(days).padStart(
-          2,
-          "0",
-        );
-        document.getElementById("cdHours").textContent = String(hrs).padStart(
-          2,
-          "0",
-        );
-        document.getElementById("cdMins").textContent = String(min).padStart(
-          2,
-          "0",
-        );
-        document.getElementById("cdSecs").textContent = String(sec).padStart(
-          2,
-          "0",
-        );
+        document.getElementById("cdDays").textContent = String(days).padStart(2, "0");
+        document.getElementById("cdHours").textContent = String(hrs).padStart(2, "0");
+        document.getElementById("cdMins").textContent = String(min).padStart(2, "0");
+        document.getElementById("cdSecs").textContent = String(sec).padStart(2, "0");
       }
       tick();
       setInterval(tick, 1000);
