@@ -97,7 +97,6 @@
         color: #f5d77a;
         background: none;
         -webkit-text-fill-color: unset;
-
         text-shadow:
           0 2px 4px rgba(0, 0, 0, 0.4),
           0 0 6px rgba(212, 175, 55, 0.15);
@@ -112,9 +111,6 @@
         to {
           filter: drop-shadow(0 0 22px rgba(245, 215, 122, 0.85));
         }
-      }
-      .text-stroke-gold {
-        -webkit-text-stroke: 1px rgba(212, 175, 55, 0.55);
       }
 
       /* ---------- Ornaments & dividers ---------- */
@@ -279,12 +275,14 @@
       }
 
       /* ---------- Hero ---------- */
-      .hero-bg {
+     .hero-bg {
         background:
-          linear-gradient(rgba(20, 3, 8, 0.78), rgba(42, 7, 16, 0.92)),
-          url("https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1920&auto=format&fit=crop");
+          linear-gradient(rgba(20, 3, 8, 0.45), rgba(42, 7, 16, 0.65)),
+          url("./wedding-bg.jpg");
         background-size: cover;
         background-position: center;
+        /* इमेज को और हाईलाइट करने के लिए चमक (Brightness) और कंट्रास्ट बढ़ा दिया है */
+        filter: brightness(1.05) contrast(1.02);
       }
 
       /* ---------- Buttons ---------- */
@@ -357,24 +355,7 @@
         }
       }
 
-      /* ---------- Couple name pulse ---------- */
-      .couple-pulse {
-        animation: none;
-        word-break: break-word;
-        overflow-wrap: break-word;
-      }
-      @keyframes pulseName {
-        0% {
-          text-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
-        }
-        100% {
-          text-shadow:
-            0 0 28px rgba(245, 215, 122, 0.85),
-            0 0 50px rgba(212, 175, 55, 0.5);
-        }
-      }
-
-      /* ---------- Door / Invitation open ---------- */
+      /* ---------- Invitation door open ---------- */
       .door {
         position: fixed;
         top: 0;
@@ -437,11 +418,6 @@
         filter: none;
       }
 
-      /* ---------- Utility ---------- */
-      .scrollbar-hidden::-webkit-scrollbar {
-        display: none;
-      }
-
       @media (max-width: 640px) {
         .mandala-hero {
           width: 300px !important;
@@ -452,7 +428,6 @@
   </head>
 
   <body class="font-serifLux">
-    <!-- ============ INVITATION DOORS ============ -->
     <div id="doors" class="fixed inset-0 z-[100] pointer-events-none">
       <div class="door left flex items-center justify-end pr-6">
         <div
@@ -472,7 +447,6 @@
       </div>
     </div>
 
-    <!-- ============ LOADING / OPEN SCREEN ============ -->
     <div
       id="openScreen"
       class="fixed inset-0 z-[110] flex flex-col items-center justify-center bg-maroonDeep text-center px-6"
@@ -501,7 +475,6 @@
       </p>
     </div>
 
-    <!-- ============ MUSIC CONTROL ============ -->
     <button
       id="musicBtn"
       class="fixed bottom-5 right-5 z-[90] w-14 h-14 rounded-full btn-royal flex items-center justify-center shadow-2xl"
@@ -511,12 +484,10 @@
         ><span class="bar"></span><span class="bar"></span>
       </div>
     </button>
-    <!-- Traditional Indian shehnai/instrumental wedding music (royalty-free) -->
     <audio id="bgMusic" loop preload="auto">
       <source src="./aud-1.mpeg" type="audio/mpeg" />
     </audio>
 
-    <!-- Fireworks button -->
     <button
       id="fwBtn"
       class="fixed bottom-5 left-5 z-[90] px-4 py-3 rounded-full btn-ghost-gold text-xs font-royal tracking-widest backdrop-blur"
@@ -524,12 +495,10 @@
       🎆 CELEBRATE
     </button>
 
-    <!-- ============ HERO ============ -->
     <section
       id="hero"
       class="relative min-h-screen hero-bg flex items-center justify-center overflow-hidden"
     >
-      <!-- corner ornaments -->
       <div
         class="absolute top-4 left-4 w-20 h-20 border-t-2 border-l-2 border-gold/60 rounded-tl-3xl"
       ></div>
@@ -543,7 +512,6 @@
         class="absolute bottom-4 right-4 w-20 h-20 border-b-2 border-r-2 border-gold/60 rounded-br-3xl"
       ></div>
 
-      <!-- rotating mandala behind names -->
       <div
         class="mandala-hero absolute w-[520px] h-[520px] mandala rotate-slow opacity-10"
       ></div>
@@ -551,7 +519,6 @@
         class="mandala-hero absolute w-[380px] h-[380px] mandala rotate-slower opacity-10"
       ></div>
 
-      <!-- Diyas -->
       <div class="absolute bottom-10 left-1/4 flex flex-col items-center">
         <span class="diya-flame text-3xl">🔥</span>
         <span class="text-3xl -mt-1">🪔</span>
@@ -574,14 +541,14 @@
         </div>
 
         <h1
-          class="font-royal text-5xl sm:text-6xl md:text-5xl lg:text-7xl xl:text-8xl gold-foil couple-pulse leading-tight tracking-wide px-2 flex flex-col md:flex-row md:items-center md:justify-center md:whitespace-nowrap"
+          class="font-royal text-5xl sm:text-6xl md:text-5xl lg:text-7xl xl:text-8xl gold-foil leading-tight tracking-wide px-2 flex flex-col md:flex-row md:items-center md:justify-center md:whitespace-nowrap"
         >
           <span class="block md:inline font-black uppercase text-center"
             >Krishna</span
           >
           <span
             class="text-rose text-4xl sm:text-5xl md:text-4xl lg:text-6xl block md:inline my-3 md:my-0 md:mx-5 text-center"
-            >&amp;</span
+            >&</span
           >
           <span class="block md:inline font-black uppercase text-center"
             >Priyanka</span
@@ -591,7 +558,7 @@
           are getting married
         </p>
         <p class="font-hindi text-3xl md:text-4xl gold-foil mt-4">
-          कृष्णा &amp; प्रियंका
+          कृष्णा & प्रियंका
         </p>
 
         <div class="mt-10 inline-flex flex-col items-center px-8 py-5 jharokha">
@@ -602,7 +569,7 @@
             24 • June • 2026
           </p>
           <p class="font-devanagari text-rose text-sm mt-1">
-            सखवानिया बुजुर्ग, कुशीनगर
+            शेखवानिया बुजुर्ग, कुशीनगर
           </p>
         </div>
 
@@ -620,7 +587,6 @@
         </div>
       </div>
 
-      <!-- scroll hint -->
       <div
         class="absolute bottom-3 left-1/2 -translate-x-1/2 text-gold/70 text-xs tracking-[0.4em] animate-bounce"
       >
@@ -628,9 +594,8 @@
       </div>
     </section>
 
-    <!-- ============ GANESH VANDANA ============ -->
-<section class="royal-bg py-12 md:py-24 px-4 md:px-6 relative">
-        <div class="max-w-4xl mx-auto text-center reveal relative z-10">
+    <section class="royal-bg py-12 md:py-24 px-4 md:px-6 relative">
+      <div class="max-w-4xl mx-auto text-center reveal relative z-10">
         <div class="ornament mx-auto mb-4"></div>
         <p class="font-royal tracking-[0.4em] text-gold/80 text-xs mb-2">
           GANESH VANDANA
@@ -661,7 +626,6 @@
       </div>
     </section>
 
-    <!-- ============ COUPLE INTRODUCTION ============ -->
     <section class="royal-bg py-12 md:py-24 px-4 md:px-6 relative">
       <div class="max-w-6xl mx-auto reveal relative z-10">
         <div class="text-center mb-14">
@@ -674,59 +638,72 @@
           </h2>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-10 items-stretch">
-          <!-- Groom -->
-          <div class="jharokha p-8 text-center">
-            <div
-              class="w-44 h-44 mx-auto rounded-full overflow-hidden border-4 border-gold shadow-[0_0_30px_rgba(212,175,55,.4)]"
-            >
-              <img
-                src="./krishna.png"
-                class="w-full h-full object-cover"
-                alt="Groom"
-              />
-            </div>
-            <p class="font-script text-3xl text-rose mt-5">The Groom</p>
-            <h3 class="font-royal text-3xl gold-foil mt-1">Krishna Gupta</h3>
-            <p class="font-hindi text-2xl text-ivory mt-1">कृष्णा गुप्ता</p>
-            <p class="text-ivory/80 italic mt-4 max-w-sm mx-auto">
-              “A heart full of dreams, a soul full of love — ready to begin this
-              sacred journey.”
-            </p>
-            <p class="text-gold text-xs tracking-widest mt-4">
-              S/O Shri ____ Gupta &amp; Smt. ____ Devi
-            </p>
-          </div>
+        <div class="max-w-5xl mx-auto">
 
-          <!-- Bride -->
-          <div class="jharokha p-8 text-center">
-            <div
-              class="w-44 h-44 mx-auto rounded-full overflow-hidden border-4 border-gold shadow-[0_0_30px_rgba(212,175,55,.4)]"
-            >
-              <img
-                src="./krishna-wife.png"
-                class="w-full h-full object-cover"
-                alt="Bride"
-              />
-            </div>
-            <p class="font-script text-3xl text-rose mt-5">The Bride</p>
-            <h3 class="font-royal text-3xl gold-foil mt-1">Priyanka Gupta</h3>
-            <p class="font-hindi text-2xl text-ivory mt-1">प्रियंका गुप्ता</p>
-            <p class="text-ivory/80 italic mt-4 max-w-sm mx-auto">
-              “With grace in her steps and love in her eyes — she walks into a
-              new beginning.”
-            </p>
-            <p class="text-gold text-xs tracking-widest mt-4">
-              D/O Shri ____ Gupta &amp; Smt. ____ Devi
-            </p>
-          </div>
-        </div>
+  <!-- Couple Image -->
+  <div class="text-center mb-10">
+    <img
+      src="./couple.png"
+      alt="Krishna & Priyanka"
+      class="w-full max-w-2xl mx-auto rounded-3xl border-4 border-gold shadow-[0_0_40px_rgba(212,175,55,.4)]"
+    />
+  </div>
+
+  <!-- Details -->
+  <div class="grid md:grid-cols-2 gap-8">
+
+    <!-- Groom -->
+    <div class="jharokha p-8 text-center">
+      <p class="font-script text-3xl text-rose">The Groom</p>
+
+      <h3 class="font-royal text-3xl gold-foil mt-2">
+        Krishna Gupta
+      </h3>
+
+      <p class="font-hindi text-2xl text-ivory mt-1">
+        कृष्णा गुप्ता
+      </p>
+
+      <p class="text-ivory/80 italic mt-4">
+        “A heart full of dreams, a soul full of love —
+        ready to begin this sacred journey.”
+      </p>
+
+      <p class="text-gold text-sm tracking-widest mt-4">
+        S/O श्री राजेश गुप्ता & श्रीमती सलावती देवी
+      </p>
+    </div>
+
+    <!-- Bride -->
+    <div class="jharokha p-8 text-center">
+      <p class="font-script text-3xl text-rose">The Bride</p>
+
+      <h3 class="font-royal text-3xl gold-foil mt-2">
+        Priyanka Gupta
+      </h3>
+
+      <p class="font-hindi text-2xl text-ivory mt-1">
+        प्रियंका गुप्ता
+      </p>
+
+      <p class="text-ivory/80 italic mt-4">
+        “With grace in her steps and love in her eyes —
+        she walks into a new beginning.”
+      </p>
+
+      <p class="text-gold text-sm tracking-widest mt-4">
+        D/O श्री मस्त राज गुप्ता & श्रीमती निर्मला देवी
+      </p>
+    </div>
+
+  </div>
+
+</div>
       </div>
     </section>
 
-    <!-- ============ INVITATION MESSAGE ============ -->
-<section id="invite" class="royal-bg py-12 md:py-24 px-4 md:px-6 relative">
-        <div class="max-w-4xl mx-auto reveal text-center relative z-10">
+    <section id="invite" class="royal-bg py-12 md:py-24 px-4 md:px-6 relative">
+      <div class="max-w-4xl mx-auto reveal text-center relative z-10">
         <div class="luxury-card p-10 md:p-14">
           <div class="ornament mx-auto mb-4"></div>
           <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">
@@ -758,9 +735,8 @@
       </div>
     </section>
 
-    <!-- ============ LOVE STORY TIMELINE ============ -->
-<section class="royal-bg py-12 md:py-24 px-4 md:px-6 relative">
-        <div class="max-w-5xl mx-auto reveal relative z-10">
+    <section class="royal-bg py-12 md:py-24 px-4 md:px-6 relative">
+      <div class="max-w-5xl mx-auto reveal relative z-10">
         <div class="text-center mb-14">
           <div class="ornament mx-auto mb-3"></div>
           <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">
@@ -776,9 +752,7 @@
             class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] timeline-line hidden md:block"
           ></div>
 
-          <!-- items -->
           <div class="space-y-10">
-            <!-- 1 -->
             <div class="md:grid md:grid-cols-2 md:gap-10 items-center">
               <div class="luxury-card p-6 md:text-right">
                 <p class="text-gold font-royal tracking-widest text-xs">
@@ -787,17 +761,17 @@
                 <h4 class="font-hindi text-2xl text-ivory mt-1">
                   पहली मुलाकात
                 </h4>
+                <p class="text-gold text-sm font-bold mt-1">7 July 2020</p>
                 <p class="text-ivory/80 mt-2">
-                  A chance encounter at a family gathering — two glances, a shy
-                  smile, and the universe quietly whispered:
-                  <em>this is the one</em>.
+                  Limewood Cafe में कॉफ़ी पर एक प्यारी और अनजानी मुलाकात — जहाँ
+                  दो निगाहें मिलीं, एक शर्मीली मुस्कान आई और कहानी की खूबसूरत
+                  शुरुआत हुई।
                 </p>
               </div>
               <div class="hidden md:flex justify-start pl-6">
                 <span class="text-5xl">🌹</span>
               </div>
             </div>
-            <!-- 2 -->
             <div class="md:grid md:grid-cols-2 md:gap-10 items-center">
               <div class="hidden md:flex justify-end pr-6">
                 <span class="text-5xl">💌</span>
@@ -810,28 +784,30 @@
                   प्यार की शुरुआत
                 </h4>
                 <p class="text-ivory/80 mt-2">
-                  Long phone calls, shared dreams, late-night laughs — every
-                  conversation made the heart a little fuller.
+                  लंबे फोन कॉल्स, साझा किए गए सपने और देर रात तक चलने वाली
+                  हँसी-मज़ाक — हर बातचीत ने दिलों को और करीब ला दिया।
                 </p>
               </div>
             </div>
-            <!-- 3 -->
             <div class="md:grid md:grid-cols-2 md:gap-10 items-center">
               <div class="luxury-card p-6 md:text-right">
                 <p class="text-gold font-royal tracking-widest text-xs">
                   THE PROPOSAL
                 </p>
-                <h4 class="font-hindi text-2xl text-ivory mt-1">सगाई</h4>
+                <h4 class="font-hindi text-2xl text-ivory mt-1">
+                  सगाई
+                </h4>
+                <p class="text-gold text-sm font-bold mt-1">27 November 2025</p>
                 <p class="text-ivory/80 mt-2">
-                  On a quiet golden evening, a promise was made — to walk
-                  together, hand in hand, through every season of life.
+                  पूरे परिवार की गरिमामयी उपस्थिति और आशीर्वाद के साथ एक अटूट
+                  वादा किया गया — जीवन के हर मौसम में एक-दूसरे का हाथ थामकर चलने
+                  का।
                 </p>
               </div>
               <div class="hidden md:flex justify-start pl-6">
                 <span class="text-5xl">💍</span>
               </div>
             </div>
-            <!-- 4 -->
             <div class="md:grid md:grid-cols-2 md:gap-10 items-center">
               <div class="hidden md:flex justify-end pr-6">
                 <span class="text-5xl">👑</span>
@@ -841,9 +817,10 @@
                   FOREVER BEGINS
                 </p>
                 <h4 class="font-hindi text-2xl text-ivory mt-1">सात फेरे</h4>
+                <p class="text-gold text-sm font-bold mt-1">24 June 2026</p>
                 <p class="text-ivory/80 mt-2">
-                  And now, surrounded by family and blessings — two souls become
-                  one, forever and always.
+                  और अब, पूरे परिवार के अपार स्नेह और दुआओं के साये में — दो
+                  पवित्र आत्माएँ सात जन्मों के पावन बंधन में बंधने जा रही हैं।
                 </p>
               </div>
             </div>
@@ -852,7 +829,6 @@
       </div>
     </section>
 
-    <!-- ============ WEDDING EVENTS ============ -->
     <section class="royal-bg py-12 md:py-24 px-4 md:px-6 relative">
       <div class="max-w-7xl mx-auto reveal relative z-10">
         <div class="text-center mb-14">
@@ -865,45 +841,30 @@
           </h2>
         </div>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Card template -->
-          <div class="luxury-card p-7 text-center group">
-            <div class="text-5xl mb-3">🌼</div>
-            <p class="font-royal text-gold tracking-widest text-xs">HALDI</p>
-            <h4 class="font-hindi text-2xl text-ivory mt-1">हल्दी समारोह</h4>
-            <p class="text-rose mt-3">23 June 2026 • Morning</p>
-            <p class="text-ivory/70 text-sm mt-2">
-              📍 Sakhwaniya Buzurg, Kushinagar
-            </p>
-          </div>
-
-          <div class="luxury-card p-7 text-center">
-            <div class="text-5xl mb-3">🌿</div>
-            <p class="font-royal text-gold tracking-widest text-xs">MEHENDI</p>
-            <h4 class="font-hindi text-2xl text-ivory mt-1">मेहंदी रस्म</h4>
-            <p class="text-rose mt-3">22 June 2026 • Evening</p>
-            <p class="text-ivory/70 text-sm mt-2">
-              📍 Sakhwaniya Buzurg, Kushinagar
-            </p>
-          </div>
-
-          <div class="luxury-card p-7 text-center">
-            <div class="text-5xl mb-3">🎶</div>
-            <p class="font-royal text-gold tracking-widest text-xs">SANGEET</p>
-            <h4 class="font-hindi text-2xl text-ivory mt-1">संगीत संध्या</h4>
-            <p class="text-rose mt-3">22 June 2026 • Night</p>
-            <p class="text-ivory/70 text-sm mt-2">
-              📍 Sakhwaniya Buzurg, Kushinagar
-            </p>
-          </div>
-
+        <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-6 max-w-4xl mx-auto">
           <div class="luxury-card p-7 text-center">
             <div class="text-5xl mb-3">🔱</div>
-            <p class="font-royal text-gold tracking-widest text-xs">TILAK</p>
-            <h4 class="font-hindi text-2xl text-ivory mt-1">तिलक समारोह</h4>
-            <p class="text-rose mt-3">21 June 2026</p>
+            <p class="font-royal text-gold tracking-widest text-xs">
+              TILAK CEREMONY
+            </p>
+            <h4 class="font-hindi text-2xl text-ivory mt-1">शुभ तिलक समारोह</h4>
+            <p class="text-rose mt-3">21 June 2026 • दिन रविवार</p>
             <p class="text-ivory/70 text-sm mt-2">
-              📍 Sakhwaniya Buzurg, Kushinagar
+              📍 ग्राम + पोस्ट - शेखवानिया बुजुर्ग, कुशीनगर
+            </p>
+          </div>
+
+          <div class="luxury-card p-7 text-center">
+            <div class="text-5xl mb-3">🌼</div>
+            <p class="font-royal text-gold tracking-widest text-xs">
+              HALDI CEREMONY
+            </p>
+            <h4 class="font-hindi text-2xl text-ivory mt-1">
+              शुभ हल्दी समारोह
+            </h4>
+            <p class="text-rose mt-3">23 June 2026 • दिन मंगलवार</p>
+            <p class="text-ivory/70 text-sm mt-2">
+              📍 ग्राम + पोस्ट - शेखवानिया बुजुर्ग, कुशीनगर
             </p>
           </div>
 
@@ -919,42 +880,33 @@
               WEDDING CEREMONY
             </p>
             <h4 class="font-hindi text-2xl text-ivory mt-1">
-              पाणिग्रहण संस्कार
+              शुभ विवाह संस्कार
             </h4>
-            <p class="text-rose mt-3">24 June 2026 • Auspicious Muhurat</p>
+            <p class="text-rose mt-3">24 June 2026 • दिन बुधवार</p>
             <p class="text-ivory/70 text-sm mt-2">
-              📍 Sakhwaniya Buzurg, Kushinagar
+              📍 विदाई स्थल: ग्राम - नौगांव
+            </p>
+            <p
+              class="text-rose/80 text-xs mt-2 border-t border-gold/20 pt-2 font-devanagari"
+            >
+              🚌 बारात हमारे निवास स्थान से शाम 5 बजे चल के सपहा होते हुए नौगांव
+              ग्राम में जाएगी।
             </p>
           </div>
 
           <div class="luxury-card p-7 text-center">
-            <div class="text-5xl mb-3">🥂</div>
-            <p class="font-royal text-gold tracking-widest text-xs">
-              RECEPTION
-            </p>
-            <h4 class="font-hindi text-2xl text-ivory mt-1">स्वागत समारोह</h4>
-            <p class="text-rose mt-3">25 June 2026 • Evening</p>
-            <p class="text-ivory/70 text-sm mt-2">
-              📍 Sakhwaniya Buzurg, Kushinagar
-            </p>
-          </div>
-
-          <div
-            class="luxury-card p-7 text-center sm:col-span-2 lg:col-span-3 max-w-md mx-auto w-full"
-          >
             <div class="text-5xl mb-3">🌸</div>
-            <p class="font-royal text-gold tracking-widest text-xs">VIDAI</p>
-            <h4 class="font-hindi text-2xl text-ivory mt-1">विदाई समारोह</h4>
-            <p class="text-rose mt-3">27 June 2026</p>
-            <p class="text-ivory/70 text-sm mt-2">
-              📍 Sakhwaniya Buzurg, Kushinagar
+            <p class="font-royal text-gold tracking-widest text-xs">
+              VIDAI CEREMONY
             </p>
+            <h4 class="font-hindi text-2xl text-ivory mt-1">शुभ विदाई</h4>
+            <p class="text-rose mt-3">25 June 2026 • दिन गुरुवार</p>
+            <p class="text-ivory/70 text-sm mt-2">📍 नौगांव ग्राम से विदाई</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ FAMILY DETAILS ============ -->
     <section class="royal-bg py-12 md:py-24 px-4 md:px-6 relative">
       <div class="max-w-6xl mx-auto reveal relative z-10">
         <div class="text-center mb-14">
@@ -972,22 +924,46 @@
             <h3 class="font-royal text-2xl gold-foil text-center">
               Groom's Family
             </h3>
-            <p class="text-rose text-center font-hindi text-xl mb-6">वर पक्ष</p>
-            <ul class="space-y-3 text-ivory/90">
+            <p class="text-rose text-center font-hindi text-xl mb-6">
+              वर पक्ष (शेखवानिया बुजुर्ग)
+            </p>
+            <ul
+              class="space-y-3 text-ivory/90 font-devanagari text-sm md:text-base"
+            >
               <li class="flex justify-between border-b border-gold/20 pb-2">
-                <span>Father</span
-                ><span class="text-gold">Shri ____ Gupta</span>
+                <span>पिता:</span
+                ><span class="text-gold">श्री राजेश गुप्ता</span>
               </li>
               <li class="flex justify-between border-b border-gold/20 pb-2">
-                <span>Mother</span><span class="text-gold">Smt. ____ Devi</span>
+                <span>माता:</span
+                ><span class="text-gold">श्रीमती सलावती देवी</span>
               </li>
               <li class="flex justify-between border-b border-gold/20 pb-2">
-                <span>Grandparents</span
-                ><span class="text-gold">Late Shri ____ Gupta</span>
+                <span>ग्राम + पोस्ट:</span
+                ><span class="text-gold">शेखवानिया बुजुर्ग</span>
               </li>
-              <li class="flex justify-between">
-                <span>Siblings</span
-                ><span class="text-gold">____ &amp; ____</span>
+              <li class="flex justify-between border-b border-gold/20 pb-2">
+                <span>थाना / तहसील:</span
+                ><span class="text-gold">कुबेरस्थान / कसया</span>
+              </li>
+              <li class="flex justify-between border-b border-gold/20 pb-2">
+                <span>जिला / पिन:</span
+                ><span class="text-gold">कुशीनगर, UP (274402)</span>
+              </li>
+              <li class="border-b border-gold/20 pb-2">
+                <span class="block text-rose font-bold mb-1"
+                  >दर्शन अभिलाषी:</span
+                >
+                <span class="text-gold block text-right"
+                  >अशोक गुप्ता, दुर्गेश गुप्ता, सूरज गुप्ता, रोहित गुप्ता, पंकज
+                  गुप्ता</span
+                >
+              </li>
+              <li>
+                <span class="block text-rose font-bold mb-1">बाल आग्रह:</span>
+                <span class="text-gold block text-right"
+                  >परी गुप्ता, आयुष गुप्ता 🧒🌸</span
+                >
               </li>
             </ul>
           </div>
@@ -997,23 +973,32 @@
               Bride's Family
             </h3>
             <p class="text-rose text-center font-hindi text-xl mb-6">
-              वधू पक्ष
+              वधू पक्ष (नौगांव)
             </p>
-            <ul class="space-y-3 text-ivory/90">
+            <ul
+              class="space-y-3 text-ivory/90 font-devanagari text-sm md:text-base"
+            >
               <li class="flex justify-between border-b border-gold/20 pb-2">
-                <span>Father</span
-                ><span class="text-gold">Shri ____ Gupta</span>
+                <span>पिता:</span
+                ><span class="text-gold">श्री मस्त राज गुप्ता</span>
               </li>
               <li class="flex justify-between border-b border-gold/20 pb-2">
-                <span>Mother</span><span class="text-gold">Smt. ____ Devi</span>
+                <span>माता:</span
+                ><span class="text-gold">श्रीमती निर्मला देवी</span>
               </li>
               <li class="flex justify-between border-b border-gold/20 pb-2">
-                <span>Grandparents</span
-                ><span class="text-gold">Late Shri ____ Gupta</span>
+                <span>ग्राम:</span><span class="text-gold">नौगांव</span>
+              </li>
+              <li class="flex justify-between border-b border-gold/20 pb-2">
+                <span>पोस्ट:</span
+                ><span class="text-gold">शेखवानिया बुजुर्ग</span>
+              </li>
+              <li class="flex justify-between border-b border-gold/20 pb-2">
+                <span>थाना:</span><span class="text-gold">कसया</span>
               </li>
               <li class="flex justify-between">
-                <span>Siblings</span
-                ><span class="text-gold">____ &amp; ____</span>
+                <span>जिला / पिन:</span
+                ><span class="text-gold">कुशीनगर, UP (274402)</span>
               </li>
             </ul>
           </div>
@@ -1023,47 +1008,45 @@
 
     <!-- ============ VENUE + MAP ============ -->
     <section class="royal-bg py-12 md:py-24 px-4 md:px-6 relative">
-      <div
-        class="max-w-6xl mx-auto reveal grid md:grid-cols-2 gap-8 items-stretch relative z-10"
-      >
+      <div class="max-w-6xl mx-auto reveal grid md:grid-cols-2 gap-8 items-stretch relative z-10">
         <div class="luxury-card p-8">
           <div class="ornament mb-3"></div>
-          <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">VENUE</p>
-          <h2 class="font-hindi text-3xl md:text-4xl gold-foil mt-1">
-            विवाह स्थल
-          </h2>
-          <p class="text-ivory mt-6 text-lg">Sakhwaniya Buzurg</p>
-          <p class="text-ivory/70">Kushinagar, Uttar Pradesh, India</p>
-
-          <div class="mt-6 space-y-2 text-ivory/80">
-            <p>📅 <span class="text-gold">24 June 2026</span></p>
-            <p>⏰ <span class="text-gold">Auspicious Muhurat</span></p>
-            <p>👗 <span class="text-gold">Traditional Indian Attire</span></p>
+          <p class="font-royal tracking-[0.4em] text-gold/80 text-xs">VENUE DETAILS</p>
+          <h2 class="font-hindi text-3xl md:text-4xl gold-foil mt-1">विवाह एवं बारात स्थल</h2>
+          
+          <!-- वर पक्ष की जानकारी -->
+          <div class="mt-6 border-b border-gold/20 pb-4">
+            <p class="text-rose text-sm font-royal tracking-widest uppercase">From (वर पक्ष निवास):</p>
+            <p class="text-ivory font-bold font-devanagari mt-0.5">ग्राम + पोस्ट - शेखवानिया बुजुर्ग</p>
+            <p class="text-ivory/70 text-xs font-devanagari">थाना - कुबेरस्थान, तहसील - कसया, जिला - कुशीनगर</p>
           </div>
 
-          <a
-            href="https://maps.google.com/?q=Sakhwaniya+Buzurg+Kushinagar"
-            target="_blank"
-            rel="noopener"
-            class="mt-8 inline-block btn-royal px-6 py-3 rounded-full text-sm tracking-widest"
-          >
-            📍 GET DIRECTIONS
+          <!-- वधू पक्ष / मुख्य विवाह स्थल की जानकारी -->
+          <div class="mt-4">
+            <p class="text-gold text-sm font-royal tracking-widest uppercase">To / Main Venue (वधू पक्ष):</p>
+            <p class="text-ivory font-bold font-devanagari mt-0.5">ग्राम - नौगांव (विवाह स्थल)</p>
+            <p class="text-ivory/70 text-xs font-devanagari">पोस्ट - शेखवानिया बुजुर्ग, थाना - कसया, जिला - कुशीनगर</p>
+          </div>
+
+          <div class="mt-6 space-y-2 text-ivory/80 font-devanagari border-t border-gold/20 pt-4">
+            <p>📅 <span class="text-gold">24 June 2026 (दिन बुधवार)</span></p>
+            <p>⏰ <span class="text-gold">बारात प्रस्थान: शाम 5:00 बजे (शेखवानिया बुजुर्ग से वाया सपहा होते हुए नौगांव जाएगी)</span></p>
+            <p>👑 <span class="text-gold">पाणिग्रहण संस्कार: शुभ विवाह वेला</span></p>
+          </div>
+
+          <!-- आपके द्वारा दिए गए नौगांव के सटीक लिंक को अपडेट कर दिया गया है -->
+          <a href="https://maps.app.goo.gl/nETwJ5dJPtBrifcW7" target="_blank" rel="noopener" class="mt-8 inline-block btn-royal px-6 py-3 rounded-full text-sm tracking-widest">
+            📍 GET DIRECTIONS TO NAUGAWAN
           </a>
         </div>
 
         <div class="luxury-card p-2 overflow-hidden">
-          <iframe
-            class="w-full h-full min-h-[360px] rounded-xl border-0"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=Sakhwaniya+Buzurg+Kushinagar&output=embed"
-          >
-          </iframe>
+          <!-- एम्बेड मैप को पूरे नौगांव क्षेत्र को कवर करने के लिए सटीक कोऑर्डिनेट्स और ज़ूम लेवल (14z) पर सेट किया गया है -->
+          <iframe class="w-full h-full min-h-[400px] rounded-xl border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14227.18925575553!2d83.8196552!3d27.0985095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3994096d956ce7ff%3A0x6e4b9749459f61a0!2sNaugawan%2C+Uttar+Pradesh!5e0!3m2!1shi!2sin!4v1717750000000!5m2!1shi!2sin"></iframe>
         </div>
       </div>
     </section>
 
-    <!-- ============ COUNTDOWN ============ -->
     <section class="royal-bg py-12 md:py-24 px-4 md:px-6 relative">
       <div class="max-w-5xl mx-auto reveal text-center relative z-10">
         <div class="ornament mx-auto mb-3"></div>
@@ -1106,7 +1089,6 @@
       </div>
     </section>
 
-    <!-- ============ GALLERY ============ -->
     <section class="royal-bg py-12 md:py-24 px-4 md:px-6 relative">
       <div class="max-w-7xl mx-auto reveal relative z-10">
         <div class="text-center mb-12">
@@ -1136,7 +1118,7 @@
           </div>
           <div class="overflow-hidden rounded-xl border border-gold/40">
             <img
-              class="gallery-img w-full h-56 object-fit-cover"
+              class="gallery-img w-full h-56 object-cover"
               src="./krishna.png"
               alt=""
             />
@@ -1157,8 +1139,8 @@
           </div>
           <div class="overflow-hidden rounded-xl border border-gold/40">
             <img
-              class="gallery-img w-full h-56 object-fit"
-              src="./krishna-wife.png"
+              class="gallery-img w-full h-56 object-cover"
+              src="./couple.png"
               alt=""
             />
           </div>
@@ -1180,7 +1162,6 @@
       </div>
     </section>
 
-    <!-- ============ BLESSINGS ============ -->
     <section class="royal-bg py-12 md:py-24 px-4 md:px-6 relative">
       <div class="max-w-4xl mx-auto reveal text-center relative z-10">
         <div class="ornament mx-auto mb-3"></div>
@@ -1211,7 +1192,6 @@
       </div>
     </section>
 
-    <!-- ============ RSVP ============ -->
     <section id="rsvp" class="royal-bg py-24 px-6 relative">
       <div class="max-w-3xl mx-auto reveal text-center relative z-10">
         <div class="ornament mx-auto mb-3"></div>
@@ -1269,13 +1249,13 @@
           </div>
 
           <div class="flex flex-wrap gap-3 pt-2">
-  <button
-    type="submit"
-    class="btn-royal px-6 py-3 rounded-full text-sm tracking-widest text-center w-full sm:w-auto"
-  >
-    💬 WHATSAPP RSVP SEND KAREN
-  </button>
-</div>
+            <button
+              type="submit"
+              class="btn-royal px-6 py-3 rounded-full text-sm tracking-widest text-center w-full sm:w-auto"
+            >
+              💬 WHATSAPP RSVP SEND KAREN
+            </button>
+          </div>
           <p id="rsvpDone" class="hidden text-rose font-script text-2xl pt-3">
             Thank you! Your blessings have been received. 🌹
           </p>
@@ -1283,31 +1263,30 @@
       </div>
     </section>
 
-    <!-- ============ FOOTER ============ -->
     <footer class="royal-bg pt-16 pb-8 px-6 relative border-t border-gold/30">
       <div class="max-w-4xl mx-auto text-center relative z-10">
         <div class="ornament mx-auto mb-4"></div>
-        <h3 class="font-royal text-2xl gold-foil">Krishna &amp; Priyanka</h3>
-        <p class="font-script text-3xl text-rose mt-1">forever &amp; always</p>
+        <h3 class="font-royal text-2xl gold-foil">Krishna & Priyanka</h3>
+        <p class="font-script text-3xl text-rose mt-1">forever & always</p>
         <p class="font-hindi text-xl text-ivory mt-3">— गुप्ता परिवार —</p>
         <p class="text-ivory/60 text-sm mt-2">With love and gratitude</p>
 
         <div class="mt-8 text-xs text-ivory/40 tracking-widest">
-  © 2026 • Designed with ♥ • 
-  <a 
-    href="https://www.itwebtech.in" 
-    target="_blank" 
-    rel="noopener noreferrer" 
-    class="text-ivory/50 hover:text-gold transition-colors duration-300 underline underline-offset-4"
-  >
-    IT WEB TECH SOLUTION
-  </a>
-</div>
+          © 2026 • Designed with ♥ •
+          <a
+            href="https://www.itwebtech.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-ivory/50 hover:text-gold transition-colors duration-300 underline underline-offset-4"
+          >
+            IT WEB TECH SOLUTION
+          </a>
+        </div>
       </div>
     </footer>
 
     <script>
-      /* =========== Invitation door open =========== */
+      /* =========== Invitation door open & Scroll Fixing =========== */
       const openBtn = document.getElementById("openBtn");
       const openScreen = document.getElementById("openScreen");
       const doors = document.getElementById("doors");
@@ -1322,6 +1301,9 @@
 
         doors.classList.add("doors-open");
         setTimeout(() => doors.remove(), 1800);
+
+        // ज़बरदस्ती पेज को लोड होने पर सबसे ऊपर (Top) स्क्रॉल कर देता है
+        window.scrollTo({ top: 0, behavior: "smooth" });
 
         // Start music
         music.volume = 0.5;
@@ -1442,24 +1424,19 @@
       setInterval(tick, 1000);
 
       /* =========== RSVP submit -> WhatsApp =========== */
-document.getElementById("rsvpForm").addEventListener("submit", (e) => {
-  e.preventDefault(); // पेज को रीफ्रेश होने से रोकने के लिए
-  
-  const name = document.getElementById("guestName").value.trim();
-  const cnt = document.getElementById("guestCount").value;
-  const att = document.getElementById("guestAttend").value;
-  const msg = document.getElementById("guestMsg").value.trim();
-  
-  // सुंदर फॉर्मेट में मैसेज तैयार करना
-  const text = `Namaste! 🙏%0A%0A*RSVP for Krishna %26 Priyanka's Wedding*%0A*Name:* ${encodeURIComponent(name)}%0A*Total Guests:* ${cnt}%0A*Status:* ${encodeURIComponent(att)}%0A*Message:* ${encodeURIComponent(msg)}`;
-  
-  // नए टैब में WhatsApp खोलना
-  window.open(`https://wa.me/918948091103?text=${text}`, "_blank");
-  
-  // स्क्रीन पर थैंक यू मैसेज दिखाना
-  document.getElementById("rsvpDone").classList.remove("hidden");
-  fireworks();
-});
+      document.getElementById("rsvpForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name = document.getElementById("guestName").value.trim();
+        const cnt = document.getElementById("guestCount").value;
+        const att = document.getElementById("guestAttend").value;
+        const msg = document.getElementById("guestMsg").value.trim();
+
+        const text = `Namaste! 🙏%0A%0A*RSVP for Krishna %26 Priyanka's Wedding*%0A*Name:* ${encodeURIComponent(name)}%0A*Total Guests:* ${cnt}%0A*Status:* ${encodeURIComponent(att)}%0A*Message:* ${encodeURIComponent(msg)}`;
+        window.open(`https://wa.me/918948091103?text=${text}`, "_blank");
+
+        document.getElementById("rsvpDone").classList.remove("hidden");
+        fireworks();
+      });
     </script>
   </body>
 </html>
